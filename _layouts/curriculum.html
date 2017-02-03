@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body class="home blog dark">
+    {% include header.html %}
+
+    <div class="switherHead"></div>
+<div class="colored">
+  <div class="blue"></div>
+  <div class="aqua"></div>
+  <div class="green"></div>
+  <div class="yellow"></div>
+  <div class="red"></div>
+</div>
+<div class="hfeed site" id="page">
+  <header role="banner" class="site_header" id="header">
+    <div class="social_links">
+      <ul>
+        <!--li class="rss"><a href="#" target="_blank" title="RSS">RSS</a></li>
+        <li class="fb"><a href="#" target="_blank" title="Facebook">Facebook</a></li>
+        <li class="tw"><a href="#" target="_blank" title="Twitter">Twitter</a></li>
+        <li class="gplus"><a href="#" target="_blank" title="Google+">Google+</a></li-->
+        <li class="lnkd"><a href="https://ar.linkedin.com/in/javibullrich/en" target="_blank" title="Linkedin">Linkedin</a></li>
+        <!--li class="drb"><a href="#" target="_blank" title="Dribbble">Dribbble</a></li>
+        <li class="vim"><a href="#" target="_blank" title="Vimeo">Vimeo</a></li>
+        <li class="pin"><a href="#" target="_blank" title="Pinterst">Pinterst</a></li-->
+      </ul>
+    </div>
+  </header>
+  <div id="main" >
+    <div class="content_area" id="primary">
+      <div role="main" class="site_content" id="content">
+        <section class="section profile_section first odd" id="profile"> <a id="blog_page_link" href="../GameDev/"><span class="icon-pencil icon"></span><span class="label">Blog</span></a>
+          <div class="section_header profile_section_header opened">
+            <h2 class="section_title profile_section_title vis"><a href="#"><span class="icon icon-user"></span><span class="section_name">Profile</span></a><span class="section_icon"></span></h2>
+            <div id="profile_header">
+              <div id="profile_user">
+                <div id="profile_photo"><img src="{{ site.presentation_image }}" alt="{{ site.presentation_name }}" /></div>
+                <div id="profile_name_area">
+                  <div id="profile_name">
+                    <h1 id="profile_title">{{ site.presentation_name }}</span></h1>
+                    <h4 id="profile_position">{{ site.presentation_title }}</h4>
+                  </div>
+                </div>
+              </div>
+              <div id="profile_data">
+                <div class="profile_row name"> <span class="th">Name:</span><span class="td">{{ site.presentation_name }}</span> </div>
+                <div class="profile_row birth"> <span class="th">Age:</span><span class="td">{{ site.presentation_age }}</span> </div>
+                <div class="profile_row address"> <span class="th">Address:</span><span class="td">{{ site.presentation_adress }}</span> </div>
+                <div class="profile_row phone"> <span class="th">Phone:</span><span class="td">{{ site.presentation_phone }}</span> </div>
+                <div class="profile_row email"> <span class="th">Email:</span><span class="td"><a href="mailto:{{ site.presentation_email }}">{{ site.presentation_email }}</a></span> </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="section_body profile_section_body">
+            <div class="proile_body"> {{ site.presentation_desc }} </div>
+          </div>
+        </section>
+        <div id="mainpage_accordion_area"> 
+
+    {% include resume.html %}
+
+    {% include portfolio.html %}
+
+    {% comment %}
+    {% include contact.html %}
+    {% endcomment %}
+
+</div>
+        <!-- #mainpage_accordion_area --> 
+      </div>
+      <!-- #content --> 
+    </div>
+    <!-- #primary --> 
+  </div>
+  <!-- #main -->
+
+    {% include footer.html %}
+
+</html>

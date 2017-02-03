@@ -1,0 +1,20 @@
+# Site settings
+title: Javier Bullrich
+name: Javier Bullrich
+curriculumLink: https://docs.google.com/document/d/1B7ns72OXmv_nVKhmwUuaxE-yx3dtnghXHOoHMAlTmI4/edit?usp=sharing
+
+# Colections settings
+collections:
+  employment:
+  education:
+  portfolio:
+
+# Presentation
+presentation_name: Javier Bullrich
+presentation_title: Game Developer
+presentation_age: 23 years
+presentation_adress: Retiro, Buenos Aires
+presentation_phone: +541136929010
+presentation_email: javierbullrich@gmail.com
+presentation_desc: I'm Javier Bullrich, 22 years old, videogame development student, gamer, bartender and web & game developer.
+presentation_image: images_post/bio-javi.jpg
