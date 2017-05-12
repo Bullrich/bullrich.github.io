@@ -10,4 +10,4 @@ duration: 2016
 - Certificate ID: 201610UCD974
 - Score 82.82
 
-Look me up in the [Certification Look Up](https://certification.unity.com/certification-lookup)
+Look me up in the [Certification Look Up](https://certification.unity.com/certification-lookup?last_name=Bullrich&certification_id=201610UCD974)
