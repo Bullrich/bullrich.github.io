@@ -57,6 +57,17 @@
           </div>
           <div class="section_body profile_section_body">
             <div class="proile_body"> {{ site.presentation_desc }} </div>
+            <script type="text/javascript">
+              function getDate(dateString){
+                  //var birthdate = new Date("1993/11/11");
+                  var birthdate = new Date(dateString);
+                  var cur = new Date();
+                  var diff = cur-birthdate;
+                  var age = Math.floor(diff/31536000000);
+                  return age;
+              }
+              document.getElementById("edad").innerHTML = getDate("1993/11/11");
+              </script>
           </div>
         </section>
         <div id="mainpage_accordion_area"> 

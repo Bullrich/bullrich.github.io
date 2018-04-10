@@ -16,5 +16,5 @@ presentation_age: 23 years
 presentation_adress: Retiro, Buenos Aires
 presentation_phone: +541136929010
 presentation_email: javierbullrich@gmail.com
-presentation_desc: I'm Javier Bullrich, 22 years old, videogame development student, gamer, bartender and web & game developer.
+presentation_desc: I'm Javier Bullrich, <label id="edad">22</label> years old, videogame development student, gamer, bartender and web & game developer.
 presentation_image: images_post/bio-javi.jpg
