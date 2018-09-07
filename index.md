@@ -2,7 +2,7 @@
 layout: curriculum
 presentation:
     email: javierbullrich@gmail.com
-    image: images_post/bio-javi.jpg
+    image: images/bio-javi.jpg
     name: Javier Bullrich
     title: Developer
     address: Retiro, Buenos Aires

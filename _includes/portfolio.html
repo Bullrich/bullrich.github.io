@@ -9,7 +9,7 @@
                 <ul id="portfolio_iso_filters">
                   <li><a class="current" data-filter="*" href="#">All</a></li>
                   <li><a data-filter=".unity" href="#">Unity</a></li>
-                  <!--li><a data-filter=".unreal" href="#">Unreal</a></li-->
+                  <li><a data-filter=".automation" href="#">Automation</a></li>
                   <li><a data-filter=".other" href="#">Other</a></li>
                 </ul>
                 <div class="portfolio_items">
@@ -17,11 +17,11 @@
                   {% for portf in site.portfolio reversed %}
                     <article class="post portfolio_post portfolio_post_1 first even {{ portf.category }}">
                       {% if portf.largeImage %}
-                      <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="images_post/portfolio/{{ portf.largeImage }}"> 
+                      <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="images/portfolio/{{ portf.largeImage }}"> 
                       {% else %}
-                      <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="images_post/portfolio/{{ portf.image }}"> 
+                      <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="images/portfolio/{{ portf.image }}"> 
                       {% endif %}
-                      <span class="overlay"></span> <span class="link-icon"></span> <img src="images_post/portfolio/{{ portf.image }}" alt="{{ portf.name }}" /> </a> </div>
+                      <span class="overlay"></span> <span class="link-icon"></span> <img src="images/portfolio/{{ portf.image }}" alt="{{ portf.name }}" /> </a> </div>
                       <h4 class="post_title"><a href="{{ portf.link }}" target="_blank">{{ portf.name }}</a></h4>
                       <h5 class="post_subtitle">{{ portf.tecnology }}</h5>
                     </article>
