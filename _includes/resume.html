@@ -104,7 +104,11 @@
           <article class="post resume_post resume_post_1 first even">
             <div class="post_header resume_post_header">
               <div class="resume_period">{{ edu.duration }}</div>
-              <h4 class="post_title"><span class="post_title_icon green"></span>{{ edu.school }}</h4>
+              <h4 class="post_title"><span class="post_title_icon green"></span>
+                {% if edu.website %}<a href="{{ edu.website }}" target="_blank">{% endif %}
+                {{ edu.school }}
+                {% if edu.website %}</a>{% endif %}
+              </h4>
               <h5 class="post_subtitle">{{ edu.career }}</h5>
             </div>
             <div class="post_body resume_post_body">
