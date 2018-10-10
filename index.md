@@ -10,20 +10,25 @@ curriculum: https://docs.google.com/document/d/1Hg6htF1YAUeUYulzGA8ypcN5wfboGtUL
 skills:
   technologies:
     - name: Unity
-      percentage: 90
+      percentage: 100
+      knowledge: Proficient
       color: blue
     - name: React
-      percentage: 80
+      percentage: 100
+      knowledge: Proficient
       color: aqua
+    - name: Docker
+      percentage: 100
+      knowledge: Proficient
+      color: red
     - name: Unix
-      percentage: 70
+      percentage: 60
+      knowledge: Advanced
       color: green
     - name: QA-Automation
       percentage: 60
+      knowledge: Advanced
       color: yellow
-    - name: Docker
-      percentage: 50
-      color: red
   languages:
     - C&num;
     - Ruby
@@ -34,6 +39,7 @@ skills:
     - Bash
     - Objective-C
     - ActionScript 3
+    - Solidity
 ---
 I'm Javier, software engineer at Jamcity, fullstack & mobile developer in my free time and passionate for AI development.
 
