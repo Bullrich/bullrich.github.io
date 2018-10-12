@@ -215,31 +215,10 @@ blockquote.sc_quote .quotes:before { display: inline-block; padding-top: 5px; co
  /* Social Links Top*/
 #header .social_links { padding-top: 20px; float: right; margin-right: 57px; overflow: hidden; }
 #header .social_links li { list-style: none; float: left; margin-left: 13px; }
-#header .social_links li a { display: block; width: 22px; height: 22px; overflow:hidden; text-indent:999px; white-space:nowrap; background-image: url(../images/social_ico.png); background-repeat:no-repeat;}
+#header .social_links li a { display: block; width: 22px; height: 22px; font-size:22px; overflow:hidden; white-space:nowrap; }
 /*soc*/
-#header .social_links li.rss a:hover{ background-position:0 0; }
-#header .social_links li.fb a:hover{ background-position: -22px 0; }
-#header .social_links li.tw a:hover{ background-position: -44px 0; }
-#header .social_links li.gplus a:hover{ background-position: -66px 0; }
-#header .social_links li.lnkd a:hover{ background-position: -88px 0; }
-#header .social_links li.drb a:hover{ background-position: -110px 0; }
-#header .social_links li.vim a:hover{ background-position: -132px 0; }
-#header .social_links li.pin a:hover{ background-position: -154px 0; }
-#header .social_links li.skp a { background-position: -176px 0; }
-#header .social_links li.xing a:hover{ background-position: -198px 0; }
-#header .social_links li.slide_share a:hover{ background-position: -220px 0; }
-/*soc:hover*/
-#header .social_links li.rss a{ background-position:0 -22px; }
-#header .social_links li.fb a{ background-position: -22px -22px; }
-#header .social_links li.tw a{ background-position: -44px -22px; }
-#header .social_links li.gplus a{ background-position: -66px -22px; }
-#header .social_links li.lnkd a{ background-position: -88px -22px; }
-#header .social_links li.drb a{ background-position: -110px -22px; }
-#header .social_links li.vim a{ background-position: -132px -22px; }
-#header .social_links li.pin a{ background-position: -154px -22px; }
-#header .social_links li.skp a{ background-position: -176px -22px; }
-#header .social_links li.xing a{ background-position: -198px -22px; }
-#header .social_links li.slide_share a{ background-position: -220px -22px; }
+#header .social_links li a:hover{ color: #C2C3C2; }
+#header .social_links li a{ color: #3A3A3A; }
 
 
 /* Main */

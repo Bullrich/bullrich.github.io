@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "_site/": true,
+        ".bundle/": true,
+        "vendor/": true
+    }
+}
