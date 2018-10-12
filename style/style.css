@@ -119,7 +119,7 @@ article.post .tags_section #post_tags li a,
 #primary .blog_section.last article.post { padding-bottom: 10px;}
 #primary .blog_section.last article.post.format-link { padding-bottom: 16px;}
 #secondary { float: right; width: 250px; margin-left: -1px; background: url(../images/v_line.gif) 0 0 repeat-y;}
-.right_sidebar #primary { float: left; width: 571px; background: url(../images/v_line.gif) right 0 repeat-y;}
+.right_sidebar #primary { float: left; width: 100%; background: url(../images/v_line.gif) right 0 repeat-y;}
 #secondary .widget { border-top: 1px solid #e5e5e5; padding: 26px 30px;}
 #secondary .widget h3 { margin-bottom: 22px;}
 #secondary .widget ul li,

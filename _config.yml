@@ -1,9 +1,18 @@
 # Site settings
 title: Javier Bullrich
 name: Javier Bullrich
+presentation:
+    email: javierbullrich@gmail.com
+    image: images/bio-javi.jpg
+    name: Javier Bullrich
+    title: Developer
+    address: Retiro, Buenos Aires
+
+permalink: /portfolio/:title
+plugins:
+  - jekyll-redirect-from
 
 # Colections settings
 collections:
   employment:
   education:
-  portfolio:
