@@ -5,10 +5,10 @@ redirect_to: '../'
 <html lang="en-US">
   <meta charset="utf-8">
   <title>Redirecting&hellip;</title>
-  <link rel="canonical" href="http://localhost:4000/">
-  <script>location="http://localhost:4000/"</script>
-  <meta http-equiv="refresh" content="0; url=http://localhost:4000/">
+  <link rel="canonical" href="https://bullrich.github.io/">
+  <script>location="https://bullrich.github.io/"</script>
+  <meta http-equiv="refresh" content="0; url=https://bullrich.github.io/">
   <meta name="robots" content="noindex">
   <h1>Redirecting&hellip;</h1>
-  <a href="http://localhost:4000/">Click here if you are not redirected.</a>
+  <a href="https://bullrich.github.io/">Click here if you are not redirected.</a>
 </html>
