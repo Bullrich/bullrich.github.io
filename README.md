@@ -1,7 +1,7 @@
-# Curriculm
+# Website
 
-* Sitio web del portfolio de Javier Bullrich
+My oficial website, with some info about me.
 
-* Contiene la pagina en su ultima version, la cual se encuentra online en [http://bullrich.github.com/curriculum](http://bullrich.github.com/curriculum)
+You can check the site here: [http://bullrich.github.com/](http://bullrich.github.com/)
 
-La pagina esta generada por Jekyll
+Made with Jekyll
