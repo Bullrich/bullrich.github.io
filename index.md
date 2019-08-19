@@ -41,6 +41,6 @@ skills:
     - ActionScript 3
     - Solidity
 ---
-I'm Javier, software engineer at Jamcity, fullstack & mobile developer in my free time and passionate for AI development.
+I'm Javier, a software engineer who devotes his time to fullstack and mobile development. In my free time I like to develop and test AIs.
 
 I also like to automate processes and make bots that interact with people, like my Reddit and Instagram's bots.   
