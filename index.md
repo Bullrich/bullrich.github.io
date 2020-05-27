@@ -1,11 +1,11 @@
 ---
 layout: curriculum
 presentation:
-    email: javierbullrich@gmail.com
+    email: javier@bullrich.dev
     image: images/bio-javi.jpg
     name: Javier Bullrich
     title: Developer
-    address: Retiro, Buenos Aires
+    address: Innsbruck, Austria
 curriculum: https://docs.google.com/document/d/1Hg6htF1YAUeUYulzGA8ypcN5wfboGtUL9D6zjcC09R8/edit?usp=sharing
 skills:
   technologies:
@@ -43,4 +43,4 @@ skills:
 ---
 I'm Javier, a software engineer who devotes his time to fullstack and mobile development. In my free time I like to develop and test AIs.
 
-I also like to automate processes and make bots that interact with people, like my Reddit and Instagram's bots.   
+I also like to automate processes and make bots that interact with people, like my Reddit and Instagram's bots.
