@@ -2,11 +2,11 @@
 title: Javier Bullrich
 name: Javier Bullrich
 presentation:
-    email: javierbullrich@gmail.com
+    email: javier@bullrich.dev
     image: images/bio-javi.jpg
     name: Javier Bullrich
     title: Developer
-    address: Retiro, Buenos Aires
+    address: Innsbruck, Austria
 
 permalink: /portfolio/:title
 plugins:

@@ -16,11 +16,7 @@
 
                   {% for portf in site.posts %}
                     <article class="post portfolio_post portfolio_post_1 first even {{ portf.category }}">
-                      {% if portf.largeImage %}
-                      <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="images/portfolio/{{ portf.largeImage }}"> 
-                      {% else %}
-                      <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="images/portfolio/{{ portf.image }}"> 
-                      {% endif %}
+                      <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="{% if portf.link %}{{ portf.link }}{% else %}{{ portf.url }}{% endif %}"> 
                       <span class="overlay"></span> <span class="link-icon"></span> <img src="images/portfolio/{{ portf.image }}" alt="{{ portf.name }}" /> </a> </div>
                       <h4 class="post_title"><a href="{% if portf.link %}{{ portf.link }}{% else %}{{ portf.url }}{% endif %}" target="_blank">{{ portf.name }}</a></h4>
                       <h5 class="post_subtitle">{{ portf.tecnology }}</h5>
