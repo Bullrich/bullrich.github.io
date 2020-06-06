@@ -23,7 +23,7 @@ skills:
       percentage: 100
       knowledge: Proficient
       color: red
-    - name: Unix
+    - name: Flutter
       percentage: 60
       knowledge: Advanced
       color: green
@@ -37,11 +37,12 @@ skills:
     - Python
     - Java
     - Scala
-    - JavaScript
+    - TypeScript
     - Bash
     - Objective-C
     - ActionScript 3
     - Solidity
+    - Dart
 ---
 I'm Javier, a software engineer who enjoys doing fullstack and mobile development. In my free time I like to develop and test AIs.
 
