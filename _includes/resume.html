@@ -4,8 +4,8 @@
     <a href="{{ page.curriculum }}" target="_blank" id="resume_link_download"><span class="label">Download</span><span
         class="icon-download icon"></span></a> </div>
   <div class="section_header resume_section_header">
-    <h2 class="section_title resume_section_title"><a href="#"><span class="icon icon-align-left"></span><span class="section_name">Resume</span></a><span
-        class="section_icon"></span></h2>
+    <h2 class="section_title resume_section_title"><a href="#"><span class="icon icon-align-left"></span><span
+          class="section_name">Resume</span></a><span class="section_icon"></span></h2>
   </div>
   <div class="section_body resume_section_body">
     <div class="sidebar resume_sidebar">
@@ -42,7 +42,8 @@
 
       <aside class="widget widget_skills">
         <h3 class="widget_title">Certifications</h3>
-        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bdf47c43-180b-41f4-a1ff-ed0b49f7ce73"></div>
+        <div data-iframe-width="150" data-iframe-height="270"
+          data-share-badge-id="bdf47c43-180b-41f4-a1ff-ed0b49f7ce73"></div>
         <script type="text/javascript">
           (function () {
             var s = document.createElement('script');
@@ -55,6 +56,13 @@
         </script>
         <br>
         <a href="certifications.html">See all certifications here</a>
+        <br>
+        <hr>
+        <codersrank-widget username="{{ page.presentation.codersrank }}"
+          style="--bg-color: #111; --header-bg-color: #222; --badge-bg-color: #333; --badge-text-color: #fff;">
+        </codersrank-widget>
+
+        <script src="https://profile.codersrank.io/widget/widget.js"></script>
       </aside>
 
       <!--aside class="widget widget_skills">
@@ -72,6 +80,7 @@
 
     </div>
     <div class="wrapper resume_wrapper">
+
       <div class="category resume_category resume_category_1 first even">
         <div class="category_header resume_category_header">
           <h3 class="category_title"><span class="category_title_icon aqua"></span>Employment</h3>
@@ -108,8 +117,8 @@
               <div class="resume_period">{{ edu.duration }}</div>
               <h4 class="post_title"><span class="post_title_icon green"></span>
                 {% if edu.website %}<a href="{{ edu.website }}" target="_blank">{% endif %}
-                {{ edu.school }}
-                {% if edu.website %}</a>{% endif %}
+                  {{ edu.school }}
+                  {% if edu.website %}</a>{% endif %}
               </h4>
               <h5 class="post_subtitle">{{ edu.career }}</h5>
             </div>

@@ -6,6 +6,8 @@ presentation:
     name: Javier Bullrich
     title: Developer
     address: Innsbruck, Austria
+    developer-story: https://stackoverflow.com/story/javyer
+    codersrank: bullrich
 curriculum: https://docs.google.com/document/d/1Hg6htF1YAUeUYulzGA8ypcN5wfboGtUL9D6zjcC09R8/edit?usp=sharing
 skills:
   technologies:
