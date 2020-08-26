@@ -1,51 +1,29 @@
 ---
-layout: curriculum
-presentation:
+layout: index
+description: Software developer with a great focus on automation, front end and developer’s experience.
+image: img/vr_coffee.jpg
+user:
     email: javier@bullrich.dev
-    image: images/bio-javi.jpg
+    github: Bullrich
+    linkedin: javibullrich/?locale=en_US
+    image: img/vr_coffee.jpg
     name: Javier Bullrich
-    title: Developer
+    
     address: Innsbruck, Austria
     developer-story: https://stackoverflow.com/story/javyer
     codersrank: bullrich
-curriculum: https://docs.google.com/document/d/1Hg6htF1YAUeUYulzGA8ypcN5wfboGtUL9D6zjcC09R8/edit?usp=sharing
-skills:
-  technologies:
-    - name: Unity
-      percentage: 100
-      knowledge: Proficient
-      color: blue
-    - name: React
-      percentage: 100
-      knowledge: Proficient
-      color: aqua
-    - name: Docker
-      percentage: 100
-      knowledge: Proficient
-      color: red
-    - name: Flutter
-      percentage: 60
-      knowledge: Advanced
-      color: green
-    - name: QA-Automation
-      percentage: 60
-      knowledge: Advanced
-      color: yellow
-  languages:
-    - C&num;
-    - Ruby
-    - Python
-    - Java
-    - Scala
-    - TypeScript
-    - Bash
-    - Objective-C
-    - ActionScript 3
-    - Solidity
-    - Dart
+technologies:
+  - Unity3D
+  - Statecharts
+  - Solidity
+  - Docker
+  - React
+  - Flutter
+  - Typescript
+  - Firebase
 ---
-I'm Javier, a software engineer who enjoys doing fullstack and mobile development. In my free time I like to develop and test AIs.
+<p>I’m Javier, software developer with a strong focus on developer experience and front end development.</p>
 
-I also like to automate processes and make bots that interact with people, like my Reddit and Instagram's bots.
+<p>Experienced game developer, I shifted those skills to transform practical ideas into fun to use software with gamification techniques.</p>
 
-See the PDF version of my cv [here](https://docs.google.com/document/d/1Hg6htF1YAUeUYulzGA8ypcN5wfboGtUL9D6zjcC09R8)
+<p>Currently located in Austria, in the heart of the alps, working on the future of trainings. Here are a few technologies I've been working with recently:</p>

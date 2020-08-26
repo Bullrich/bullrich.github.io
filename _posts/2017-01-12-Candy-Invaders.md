@@ -1,15 +1,14 @@
 ---
-layout: post
+layout: project
 name: Candy Invaders
 image: candy.jpg
 category: unity
-tecnology: Unity
+technology: Unity
 game: candy-invaders
+description: Small Unity skill development test
 ---
-#### **Unity version:** 5.5
 
-Total development time: 6 hours.
-**Controls**: X to shot, arrows to move.
+<img src="../../img/portfolio/candy.jpg"/>
 
 Candy Invaders was a game made to show all my programming skills.
 

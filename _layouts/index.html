@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ base }}css/navbar.css">
+</head>
+<body>
+
+{% include navbar.html %}
+
+<div class="portfolio">
+
+
+  <section class="portfolio-section odd-section" id="title">
+    <div class="vertical-center align-point">
+      <div class="container">
+        <div style="font-size: 48px;">Hi, I am</div>
+        <div class="portfolio-name">{{ page.user.name }}.</div>
+        <div class="portfolio-slogan">I create experiences.</div>
+        <p style="font-size: 24px; width: 70%">{{ page.description }}</p>
+        <a href="mailto:{{ page.user.email }}" target="_blank">
+          <i class="fa fa-envelope fa-3x media-circle" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/{{ page.user.github }}" rel="noreferrer" target="_blank">
+          <i class="fa fa-github-alt fa-3x media-circle" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/{{ page.user.linkedin }}" rel="noreferrer" target="_blank">
+          <i class="fa fa-linkedin fa-3x media-circle" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-section even-section" id="about">
+    <div class="vertical-center align-point">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{{ page.user.image }}" alt="profile" class="about-img  img-float">
+          </div>
+          <div class="col-lg-6">
+            <h1 style="font-size: 64px">About me</h1>
+            <hr class="my-2">
+            {{page.content}}
+            <ul class="skill-container">
+              {% for tech in page.technologies %}
+              <li class="skill-detail">{{ tech }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="tech-stack row">
+          <div class="col-md-2">
+            <div class="tech-container img-float">
+              <img src="../img/stack/unity-logo.png" alt="tech" class="tech-pic"/>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="tech-container img-float">
+              <img src="../img/stack/react-logo.png" alt="tech" class="tech-pic"/>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="tech-container img-float">
+              <img src="../img/stack/flutter-logo.png" alt="tech" class="tech-pic"/>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="tech-container img-float">
+              <img src="../img/stack/docker-logo.png" alt="tech" class="tech-pic"/>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="tech-container img-float">
+              <img src="../img/stack/typescript-logo.png" alt="tech" class="tech-pic"/>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="tech-container img-float">
+              <img src="../img/stack/ethereum-logo.png" alt="tech" class="tech-pic"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="odd-section long-section" id="experience">
+
+    <div class="vertical-center">
+      <div class="container">
+        <div style="max-width: 450px">
+          <h1 style="font-size: 64px">Where I worked</h1>
+          <hr class="my-2 even">
+        </div>
+        <br class="divider"/>
+
+        {% for job in site.employment reversed %}
+        <div class="xp-card">
+          <div class="xp-card-upper-title">
+            <div class="xp-card-title" style="float:left">{{ job.company }}</div>
+            <span class="xp-card-time">{{ job.duration }}</span>
+          </div>
+          <hr class="my-2 even">
+          <div class="xp-card-title">{{ job.title }}</div>
+          <p>{{ job.content }}</p>
+          <ul class="skill-container">
+            {% for job_tech in job.technologies %}
+            <li class="skill-detail">{{ job_tech }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        {% if forloop.last == false %}
+        <div class="xp-line-container">
+          <div class="xp-line"></div>
+        </div>
+        {% endif %}
+
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+  <section class="even-section long-section" id="work">
+    <div class="vertical-center">
+      <div class="container">
+        <div style="max-width: 550px">
+          <h1 style="font-size: 64px">Some things I built</h1>
+          <hr class="my-2">
+        </div>
+        <div class="row" style="margin-bottom: 100px;">
+          {% for portf in site.posts %}
+          {% if portf.featured == true %}
+          <div class="col-lg-4">
+            <a href="{% if portf.link %}{{ portf.link }}{% else %}{{ portf.url }}{% endif %}"
+               class="hovering-link"
+               rel="noreferrer"
+            >
+              <div class="featured-container">
+                <div class="featured-image-container">
+                  <img class="featured-image" src="img/portfolio/{{ portf.image }}" alt="{{ portf.name }}"/>
+                </div>
+                <div class="featured-text-container work-text-container work-text-content">
+                  <h3>{{ portf.name }}</h3>
+                  <p>{{ portf.description }}</p>
+                  <div class="middle-color">{{ portf.technology }}</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          {% endfor %}
+
+        </div>
+
+        <div style="max-width: 270px">
+          <h1 style="font-size: 36px">Other mentions</h1>
+          <hr class="my-4">
+          <p>
+            <u>
+              <a href="{{ page.user.developer-story }}" target="_blank" rel="noreferrer">
+                See all of them in my developer story
+              </a>
+            </u>
+          </p>
+        </div>
+
+        <div style="margin: auto; max-width: 850px;">
+          <div class="row">
+
+            {% for portf in site.posts %}
+            {% if portf.featured != true %}
+            <div class="col-lg-4">
+              <a href="{% if portf.link %}{{ portf.link }}{% else %}{{ portf.url }}{% endif %}" rel="noreferrer">
+                <div class="work-text-container">
+                  <div class="centered-content work-text-content" style="width: 90%;">
+                    <h3>{{ portf.name }}</h3>
+                    <p>{{ portf.description }}</p>
+                    <div class="middle-color">{{ portf.technology }}</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include footer.html %}
+</div>
+</body>
+<script src="{{ base }}js/navbar.js" async></script>
+
+</html>
