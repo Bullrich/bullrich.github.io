@@ -4,6 +4,7 @@ image: unity-console.png
 largeImage: unity-console-big.jpg
 category: unity
 link: https://github.com/Bullrich/unity-console
-tecnology: Unity
-layout: post
+technology: Unity
+layout: project
+description: Small in-game console for the Unity Editor
 ---

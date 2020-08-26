@@ -1,14 +1,15 @@
 ---
-layout: post
+layout: project
 name: Multitier Architecture
 image: multitier.gif
 largeImage: multitierBig.gif
 category: unity
-tecnology: Unity
+technology: Unity
+description: Gamification of the Multitier architecture
 ---
 This game is a literal representation of [Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture), a type of client–server architecture.
 
-<img src="../../images/portfolio/multitierBig.gif"/>
+<img src="../../img/portfolio/multitierBig.gif"/>
 
 There is not a single rigidbody in the whole game. I took as a challenge to write up my own physics, make my own pixel art and program it using the multitier architecture.
 
