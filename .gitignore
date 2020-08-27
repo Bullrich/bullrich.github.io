@@ -15,5 +15,3 @@ npm-debug.log*
 .jekyll-cache
 
 .idea/
-
-.DS_Store
