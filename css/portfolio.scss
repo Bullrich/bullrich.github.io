@@ -99,11 +99,20 @@ hr.even {
 }
 
 .portfolio-slogan {
-  font-size: 12vw;
+  font-size: 9vw;
   line-height: 10vh;
 
   @media screen and (min-width: 1200px) {
-    font-size: 80px;
+    font-size: 5em;
+    line-height: 94px;
+  }
+}
+
+.section-header{
+  font-size: 9vw;
+
+  @media screen and (min-width: 800px) {
+    font-size: 4em;
     line-height: 94px;
   }
 }
