@@ -2,10 +2,8 @@
 layout: certifications
 name: Certifications
 udemy_certifications:
-  - name: Ruby for Programmer
-    key: UC-O6NLC29O
-  - name: Flutter development
-    key: UC-e3f56884-a5c5-49df-b216-42ee8086068c
+  - name: "Go: The Complete Developer's Guide (Golang)"
+    key: UC-1599ea31-c379-4a12-aa33-cb93ceea0f3d
   - name: Modern React with Redux
     key: UC-O6NBTNAT
   - name: React Native and Redux
@@ -16,6 +14,10 @@ udemy_certifications:
     key: UC-IHRE0ZW1
   - name: Understanding Typescript
     key: UC-STF7TTFI
+  - name: Ruby for Programmer
+    key: UC-O6NLC29O
+  - name: Flutter development
+    key: UC-e3f56884-a5c5-49df-b216-42ee8086068c
   - name: SVG & CSS Animations
     key: UC-4Y7GND7N
     
