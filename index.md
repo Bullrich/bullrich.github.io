@@ -20,7 +20,7 @@ technologies:
   - React
   - Flutter
   - Typescript
-  - Firebase
+  - Go
 ---
 <p>I’m Javier, software developer with a strong focus on developer experience and front end development.</p>
 
