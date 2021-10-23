@@ -26,4 +26,4 @@ technologies:
 
 <p>Experienced game developer, I shifted those skills to transform practical ideas into fun to use software with gamification techniques.</p>
 
-<p>Currently located in Austria, in the heart of the alps, working on the future of trainings. Here are a few technologies I've been working with recently:</p>
+<p>Currently located in Berlin, Germany, working in combining banking technologies with cryptocurencies. Here are a few technologies I've been working with recently:</p>
