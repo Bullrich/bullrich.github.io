@@ -9,8 +9,6 @@ presentation:
     address: Innsbruck, Austria
 image: img/vr_coffee.jpg
 description: Software developer with a great focus on automation, front end and developer’s experience.
-webmaster_verifications:
-  google: rYxvHjzTha6eyNmkQGcWQ6d0SKwOkhd1tPbr8Y6zKU0
 social:
   name: Javier Bullrich
   links:
@@ -18,7 +16,7 @@ social:
     - https://www.linkedin.com/in/javibullrich/?locale=en_US
     - https://github.com/Bullrich
 
-permalink: /portfolio/:title
+permalink: /blog/:title
 plugins:
   - jekyll-seo-tag
   - jekyll-gzip
@@ -26,6 +24,9 @@ plugins:
 # Colections settings
 collections:
   employment:
+  portfolio:
+    output: true
+    permalink: /portfolio/:title
 
 markdown: kramdown
 # More › http://kramdown.gettalong.org/quickre...
