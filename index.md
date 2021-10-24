@@ -9,7 +9,7 @@ user:
     image: img/vr_coffee.jpg
     name: Javier Bullrich
     
-    address: Innsbruck, Austria
+    address: Berlin, Germany
     developer-story: https://stackoverflow.com/story/javyer
     codersrank: bullrich
 technologies:
