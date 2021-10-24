@@ -136,7 +136,7 @@
           <hr class="my-2">
         </div>
         <div class="row" style="margin-bottom: 100px;">
-          {% for portf in site.posts %}
+          {% for portf in site.portfolio %}
           {% if portf.featured == true %}
           <div class="col-lg-4">
             <a href="{% if portf.link %}{{ portf.link }}{% else %}{{ portf.url }}{% endif %}"
@@ -175,7 +175,7 @@
         <div style="margin: auto; max-width: 850px;">
           <div class="row">
 
-            {% for portf in site.posts %}
+            {% for portf in site.portfolio %}
             {% if portf.featured != true %}
             <div class="col-lg-4">
               <a href="{% if portf.link %}{{ portf.link }}{% else %}{{ portf.url }}{% endif %}" rel="noreferrer">
