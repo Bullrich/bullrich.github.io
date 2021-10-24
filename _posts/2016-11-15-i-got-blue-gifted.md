@@ -7,4 +7,4 @@ cover: /images/posts/blue.jpg
 ---
 I got Blue Square Flow logo gifted as a plush toy for my birthday. Look at it! It’s adorable!! And very plushy.
 
-![Blue]({{ base }}img/posts/blue.jpg)
+![Blue](../../img/posts/blue.jpg)

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title:  "New Website!"
 date:   2017-02-09
 categories:
