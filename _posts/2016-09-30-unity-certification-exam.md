@@ -17,7 +17,7 @@ We opened it, had to read a Terms & Agreement stuff that no one ever read so I s
 
 Now came the real part. I opened the “Course” again and it send me to the exam tutorial. A timer start, that gave me 90 minutes to answer everything. There were 3 types of questions: multiple choices, match descriptions with names, and click on a picture the part that you are asked.
 
-_NOW _ the real exam starts!
+_NOW_ the real exam starts!
 
 The first section was all about Animation. Some tricky question, select several stuff bad explained, and match things whose name I didn’t understand with things whose descriptions I didn’t understand. Need to have 70% of the questions correctly answered, got 50%. Shrugs, bad way to start.
 
@@ -55,7 +55,7 @@ Last but not least: User Interface. Explain which type should a method be to be 
 
  
 
-So then, by the end, I got a 82(I think that it was 1660 points of 2000). I was second completing the exam (damn Game Design section that freezed my site). It was really really easy and EVERYTHING that they’ll ask you can be find on the [Exam Objectives pdf](https://certification.unity.com/themes/certification/docs/unity-certified-developer-exam-objectives.pdf)(I literally have this opened and copy some of the “Certification Objectives” for telling you some question). I recommend checking the docs before going to the exam but good luck.
+So then, by the end, I got a 82(I think that it was 1660 points of 2000). I was second completing the exam (damn Game Design section that freezed my site). It was really really easy and EVERYTHING that they’ll ask you can be find on the [Exam Objectives pdf](https://certification.unity.com/themes/certification/docs/unity-certified-developer-exam-objectives.pdf) (I literally have this opened and copy some of the “Certification Objectives” for telling you some question). I recommend checking the docs before going to the exam but good luck.
 
 For people that say that the certification is useless, I recommend reading [this](https://www.reddit.com/r/Unity3D/comments/4fp2x3/last_weekend_i_took_and_passed_the_unity/d2b12hw) answer in a reddit post. That is the UCDE main objective. Also, it’s valid for only two years, so you have to squish all you can from it in that time.
 
