@@ -175,7 +175,8 @@
         <div style="margin: auto; max-width: 850px;">
           <div class="row">
 
-            {% for portf in site.portfolio %}
+            {% assign portfolios = site.portfolio | sort: 'date' | reverse %}
+            {% for portf in portfolios %}
             {% if portf.featured != true %}
             <div class="col-lg-4">
               <a href="{% if portf.link %}{{ portf.link }}{% else %}{{ portf.url }}{% endif %}" rel="noreferrer">
