@@ -5,7 +5,6 @@ category: other
 technology: Flutter
 link: https://github.com/Bullrich/Swim-Tracker
 layout: project
-featured: true
 description: Sport app for tracking swimming sessions
 ---
 # Swim Tracker
