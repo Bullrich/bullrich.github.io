@@ -405,3 +405,13 @@ a.text-link {
     padding-bottom: 30px;
   }
 }
+
+blockquote {
+  border-left: 10px solid $primary-dark;
+  padding-left: 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote p {
+  display: inline;
+}
