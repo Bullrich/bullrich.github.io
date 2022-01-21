@@ -7,7 +7,9 @@ categories:
 tags:
     - unity
 ---
-I have been fighting for a couple of days against a problem I had with a scene in Unity. First, I noticed that the game didn’t load a script when compiling for Android, then others scripts didn’t find the gameobject with said script. Then I started to debug and debug…
+I have been fighting for a couple of days against a problem I had with a scene in Unity. 
+
+First, I noticed that the game didn’t load a script when compiling for Android, then others scripts didn’t find the gameobject with said script. Then I started to debug and debug…
 
 ![My helpful screenshot](../../img/posts/la_escena.jpg)
 

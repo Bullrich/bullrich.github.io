@@ -7,7 +7,9 @@ categories:
 tags:
     - unity
 ---
-Today, in Argentina, I was one of the first Argentinian who could take the Unity Certified Developer Exam (God, I won’t write that again, so I’ll say UCDE), literally the second, today were two exams, one at 1 pm, and the other at 3 pm. I was at the 1 pm one, and finish it second because some complications that I will address in a moment.
+Today, in Argentina, I was one of the first Argentinians who could take the Unity Certified Developer Exam.
+
+I was literally the second one to finish it, today were two exams, one at 1 pm, and the other at 3 pm. I was at the 1 pm one, and finish it second because some complications that I will address in a moment.
 
 The exam took place at the [Universidad Abierta Interamericana – UAI](http://www.uai.edu.ar/), where the director of the UAI’s Game Develepment career was helping a person from Unity, who later presented himself as James, to setup everything. Fifteen minutes later they called us, asked for our IDs and our email, which James typed into a skype conversation and then hit send. We stood there waiting for another 10 minutes until James presented himself as James, and wrote down on a blackboard the url that we had to access in a sub site in Unity Certification’s site. Everything pretty normal, we were given our email as the username and a default password, that we had to change the moment that we log in. After that we waited for another five minutes until everyone had the option to open the exam in our “Courses” dashboard.
 
@@ -57,7 +59,7 @@ Last but not least: User Interface. Explain which type should a method be to be 
 
 So then, by the end, I got a 82(I think that it was 1660 points of 2000). I was second completing the exam (damn Game Design section that freezed my site). It was really really easy and EVERYTHING that they’ll ask you can be find on the [Exam Objectives pdf](https://certification.unity.com/themes/certification/docs/unity-certified-developer-exam-objectives.pdf) (I literally have this opened and copy some of the “Certification Objectives” for telling you some question). I recommend checking the docs before going to the exam but good luck.
 
-For people that say that the certification is useless, I recommend reading [this](https://www.reddit.com/r/Unity3D/comments/4fp2x3/last_weekend_i_took_and_passed_the_unity/d2b12hw) answer in a reddit post. That is the UCDE main objective. Also, it’s valid for only two years, so you have to squish all you can from it in that time.
+For people that say that the certification is useless, I recommend reading [this](https://www.reddit.com/r/Unity3D/comments/4fp2x3/last_weekend_i_took_and_passed_the_unity/d2b12hw) answer in a reddit post. That is the Exam's main objective. Also, it’s valid for only two years, so you have to squish all you can from it in that time.
 
  
 
