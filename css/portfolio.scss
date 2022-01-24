@@ -415,3 +415,9 @@ blockquote {
 blockquote p {
   display: inline;
 }
+
+.blog-post {
+  img { 
+    max-width: 100%;
+  }
+}
