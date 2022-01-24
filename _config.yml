@@ -1,20 +1,19 @@
 # Site settings
 title: Javier Bullrich
 name: Javier Bullrich
-presentation:
-    email: javier@bullrich.dev
-    image: images/bio-javi.jpg
-    name: Javier Bullrich
-    title: Developer
-    address: Innsbruck, Austria
-image: img/vr_coffee.jpg
 description: Software developer with a great focus on automation, front end and developer’s experience.
-social:
-  name: Javier Bullrich
-  links:
-    - https://twitter.com/javierbullrich
-    - https://www.linkedin.com/in/javibullrich/?locale=en_US
-    - https://github.com/Bullrich
+user:
+    email: javier@bullrich.dev
+    github: Bullrich
+    linkedin: javibullrich/?locale=en_US
+    image: img/vr_coffee.jpg
+    name: Javier Bullrich
+    
+    address: Berlin, Germany
+    developer-story: https://stackoverflow.com/story/javyer
+    codersrank: bullrich
+image: img/vr_coffee.jpg
+url: https://bullrich.dev
 
 permalink: /blog/:title
 plugins:

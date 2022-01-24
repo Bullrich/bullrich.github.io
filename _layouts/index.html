@@ -15,16 +15,16 @@
     <div class="vertical-center align-point">
       <div class="container">
         <div style="font-size: 3em;">Hi, I am</div>
-        <div class="portfolio-name">{{ page.user.name }}.</div>
+        <div class="portfolio-name">{{ site.user.name }}.</div>
         <div class="portfolio-slogan">I create experiences.</div>
         <p style="font-size: 24px; width: 70%">{{ page.description }}</p>
-        <a href="mailto:{{ page.user.email }}" target="_blank">
+        <a href="mailto:{{ site.user.email }}" target="_blank">
           <i class="fa fa-envelope fa-3x media-circle" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/{{ page.user.github }}" rel="noreferrer" target="_blank">
+        <a href="https://github.com/{{ site.user.github }}" rel="noreferrer" target="_blank">
           <i class="fa fa-github-alt fa-3x media-circle" aria-hidden="true"></i>
         </a>
-        <a href="https://www.linkedin.com/in/{{ page.user.linkedin }}" rel="noreferrer" target="_blank">
+        <a href="https://www.linkedin.com/in/{{ site.user.linkedin }}" rel="noreferrer" target="_blank">
           <i class="fa fa-linkedin fa-3x media-circle" aria-hidden="true"></i>
         </a>
       </div>
@@ -37,7 +37,7 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="{{ page.user.image }}" alt="profile" class="about-img  img-float">
+            <img src="{{ page.image }}" alt="profile" class="about-img  img-float">
           </div>
           <div class="col-lg-6">
             <h1 style="font-size: 64px">About me</h1>

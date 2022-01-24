@@ -3,12 +3,8 @@ layout: index
 description: Software developer with a great focus on automation, front end and developer’s experience.
 image: img/vr_coffee.jpg
 user:
-    email: javier@bullrich.dev
-    github: Bullrich
-    linkedin: javibullrich/?locale=en_US
     image: img/vr_coffee.jpg
     name: Javier Bullrich
-    
     address: Berlin, Germany
     developer-story: https://stackoverflow.com/story/javyer
     codersrank: bullrich
