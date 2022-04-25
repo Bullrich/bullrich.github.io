@@ -5,7 +5,7 @@ category: unity
 technology: Unity
 link: https://openupm.com/packages/dev.bullrich.asmdef-debug/
 layout: project
-featured: true
+featured: false
 description: Assembly reload debugger for Unity3D
 ---
 # Unity Assembly Debugger
