@@ -287,6 +287,7 @@ br.divider {
   background-color: $primary-dark;
   margin-bottom: 20px;
   transition: .3s;
+  border-radius: 5px;
 
   &:hover {
     background-color: $secondary-dark;
