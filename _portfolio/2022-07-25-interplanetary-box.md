@@ -36,7 +36,9 @@ When the user wants to download a file, it fetches its CiD from the smart contra
 
 ## Demo video
 
-<iframe width="924" height="520" src="https://www.youtube.com/embed/4UX5Vq8k_j8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a class="youtube-button" href="https://youtu.be/4UX5Vq8k_j8" target="_blank"><button type="button" class="btn btn-danger">Watch on Youtube</button></a>
+
+<iframe class="youtube-video" width="924" height="520" src="https://www.youtube.com/embed/4UX5Vq8k_j8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Code and deployed app
 

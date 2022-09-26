@@ -422,3 +422,23 @@ blockquote p {
     max-width: 100%;
   }
 }
+
+.youtube-video {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .youtube-video {
+      display: block;
+  }
+}
+
+.youtube-button {
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .youtube-button {
+      display: none;
+  }
+}
