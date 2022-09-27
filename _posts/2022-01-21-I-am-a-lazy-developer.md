@@ -5,7 +5,7 @@ date:   2022-01-21
 categories: blog
 ---
 
-I’m a lazy developer. I automate everything I can so I don’t have to do it. There! I say it.
+I’m a lazy developer. I automate everything I can so I don’t have to do it. There! I said it.
 
 I have even automated this website because I’m too lazy to update the copyright information.
 
