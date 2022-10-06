@@ -442,3 +442,8 @@ blockquote p {
       display: none;
   }
 }
+
+.article-title {
+  font-size: 64px; 
+  overflow-wrap: break-word;
+}
