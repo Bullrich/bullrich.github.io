@@ -103,7 +103,9 @@
         {% for job in site.employment reversed %}
         <div class="xp-card">
           <div class="xp-card-upper-title">
-            <div class="xp-card-title" style="float:left">{{ job.company }}</div>
+            <div class="xp-card-title" style="float:left">
+              <a href="{{ job.website }}">{{ job.company }}</a>
+            </div>
             <span class="xp-card-time">{{ job.duration }}</span>
           </div>
           <hr class="my-2 even">
