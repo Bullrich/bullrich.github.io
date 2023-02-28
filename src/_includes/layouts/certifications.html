@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "head.html" %}
+  <title>{{ title }}</title>
+</head>
+<body>
+<div class="portfolio">
+  <section class="long-section even-section" id="title">
+    <div class="vertical-center align-point">
+      <div class="container">
+        <h3 class="post_title">Certifications</h3>
+
+
+        <h1>Unity Certified Developer</h1>
+        <div data-iframe-width="150" data-iframe-height="270"
+             data-share-badge-id="bdf47c43-180b-41f4-a1ff-ed0b49f7ce73"></div>
+        <script type="text/javascript">
+          (function () {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//cdn.youracclaim.com/assets/utilities/embed.js';
+            var o = document.getElementsByTagName('script')[0];
+            o.parentNode.insertBefore(s, o);
+          })();
+        </script>
+
+        {% for certification_item in udemy_certifications %}
+        <h1>{{ certification_item.name }}</h1>
+        <p><a href="https://www.udemy.com/certificate/{{ certification_item.key }}/">
+          <img class="diploma" src="{{ '/' | url }}/img/certifications/{{ certification_item.key }}.jpg">
+        </a></p>
+        {% endfor %}
+        {{ content | safe }}
+      </div>
+    </div>
+  </section>
+
+  {% include "footer.html" %}
+</div>
+</body>
+
+
+<style>
+  .diploma {
+    max-width: 500px;
+  }
+</style>
+</html>
+

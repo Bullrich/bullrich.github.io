@@ -1,0 +1,27 @@
+{
+  "name": "bullrich.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "scripts": {
+    "start": "eleventy --serve --quiet",
+    "build": "eleventy --input=. --output=_site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bullrich/bullrich.github.io.git"
+  },
+  "author": "Javier Bullrich <javier@bullrich.dev>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bullrich/bullrich.github.io/issues"
+  },
+  "homepage": "https://github.com/bullrich/bullrich.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "bootstrap": "^4.5.0",
+    "eleventy-sass": "^2.2.1",
+    "font-awesome": "^4.7.0",
+    "moment": "^2.29.4"
+  }
+}
