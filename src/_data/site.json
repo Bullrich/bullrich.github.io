@@ -1,4 +1,9 @@
 {
     "name": "Javier Bullrich",
-    "url": "https://bullrich.dev"
+    "url": "https://bullrich.dev",
+    "user": {
+        "email": "javier@bullrich.dev",
+        "github": "Bullrich",
+        "linkedin": "javibullrich/?locale=en_US"
+    }
 }
