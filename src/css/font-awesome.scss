@@ -1,1 +1,8 @@
-@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+$fa-font-path: "./webfonts";
+
+// importing core styling file
+@import "../../node_modules/fontawesome-free/scss/fontawesome.scss";
+
+// our project needs Solid + Brands
+@import "../../node_modules/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/fontawesome-free/scss/brands.scss";

@@ -21,7 +21,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "bootstrap": "^4.5.0",
     "eleventy-sass": "^2.2.1",
-    "font-awesome": "^4.7.0",
+    "fontawesome-free": "^1.0.4",
     "html-minifier": "^4.0.0",
     "moment": "^2.29.4"
   }

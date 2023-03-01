@@ -7,7 +7,7 @@ module.exports = config => {
     const dateFilter = require('./src/filters/date-filter.js');
     const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
-    config.addPassthroughCopy({ "./node_modules/font-awesome/fonts": "fonts" });
+    config.addPassthroughCopy({ "./node_modules/fontawesome-free/webfonts": "css/webfonts" });
     config.addPassthroughCopy({ "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "js/bootstrap.bundle.min.js" });
     config.addPassthroughCopy({ "./node_modules/jquery/dist/jquery.min.js": "js/jquery.min.js" });
 
