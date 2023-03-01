@@ -4,7 +4,7 @@
   "description": "My personal website",
   "scripts": {
     "start": "eleventy --serve --quiet",
-    "build": "eleventy --input=. --output=_site"
+    "build": "NODE_ENV=production eleventy"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "bootstrap": "^4.5.0",
     "eleventy-sass": "^2.2.1",
     "font-awesome": "^4.7.0",
+    "html-minifier": "^4.0.0",
     "moment": "^2.29.4"
   }
 }
