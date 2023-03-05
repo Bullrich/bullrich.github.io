@@ -17,7 +17,7 @@ technologies:
   - Statecharts
   - Solidity
   - Docker
-  - React
+  - Svelte
   - Flutter
   - Typescript
   - Go
