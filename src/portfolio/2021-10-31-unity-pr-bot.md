@@ -3,7 +3,6 @@ title: Unity PR Bot
 image: unity-pr-bot.png
 category: other
 technology: Svelte, Typescript, Firebase
-featured: true
 description: GitHub app for Unity Cloud projects
 ---
 # Unity Cloud Status Check
