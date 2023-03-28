@@ -24,5 +24,8 @@
     "fontawesome-free": "^1.0.4",
     "html-minifier": "^4.0.0",
     "moment": "^2.29.4"
+  },
+  "dependencies": {
+    "eleventy-plugin-time-to-read": "^1.3.0"
   }
 }

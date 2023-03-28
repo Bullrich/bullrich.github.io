@@ -18,6 +18,7 @@
         {% for post in collections.blog %}
         <h2><a href={{ post.url }}>{{ post.data.title }}</a></h2>
         <h6 style="font-size: 14px">{{ post.date | w3DateFilter }}</h6>
+        <h6 style="font-size: 13px">{{ post.content | timeToRead ('150 words a minute') }} read</h6>
         <p>{{ post.templateContent | excerpt }}</p>
         {% endfor %}
       </div>

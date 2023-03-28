@@ -1,6 +1,7 @@
 const eleventySass = require("eleventy-sass");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
+const timeToRead = require('eleventy-plugin-time-to-read');
 
 module.exports = config => {
     // Filters
@@ -43,6 +44,7 @@ module.exports = config => {
     // Plugins
     config.addPlugin(eleventySass);
     config.addPlugin(syntaxHighlight);
+    config.addPlugin(timeToRead);
 
     if (process.env.NODE_ENV === "production") {
         config.addTransform("htmlmin", function (content) {
