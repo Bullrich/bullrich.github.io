@@ -9,12 +9,16 @@ module.exports = config => {
     const dateFilter = require('./src/filters/date-filter.js');
     const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
-    qr.toFile('./dist/img/qr.svg', 'https://bullrich.dev/social', {
-        width: 200, margin: 0, color: {
-            light: '#0000'
-        }
-    }, function (err) {
-        if (err) throw err;
+    // Build QR code after building the dist directory
+    config.on('eleventy.after', async ({ dir }) => {
+        console.log("dir", dir);
+        qr.toFile(`${dir.output}/img/qr.svg`, 'https://bullrich.dev/social', {
+            width: 200, margin: 0, color: {
+                light: '#0000'
+            }
+        }, function (err) {
+            if (err) throw err;
+        });
     });
 
     config.addPassthroughCopy({ "./node_modules/fontawesome-free/webfonts": "css/webfonts" });
