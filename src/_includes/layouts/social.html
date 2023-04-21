@@ -1,0 +1,67 @@
+{% extends "layouts/base.html" %}
+
+{% if image %}
+{% set socialImage = image %}
+{% endif %}
+
+{% block content %}
+
+<nav class="navbar smart-scroll navbar-expand-lg navbar-dark odd-section">
+    <div class="container">
+        <a class="navbar-brand" href="{{ '/' | url }}">Javier Bullrich</a>
+    </div>
+</nav>
+<div class="portfolio">
+    <section class="long-section even-section" id="social">
+        <div class="vertical-center align-point">
+            <div class="container">
+                <h1 class="article-title mb-5">{{title}}</h1>
+
+                <div class="row">
+                    <div class="col-md">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{{ site.url }}" target="_blank" rel="noreferrer">
+                                    <i class="fa fa-blog fa-3x media-circle" aria-hidden="true"></i>
+                                    {{ site.url }}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:{{ social.email }}" target="_blank" rel="noreferrer">
+                                    <i class="fa fa-envelope fa-3x media-circle" aria-hidden="true"></i>
+                                    {{ social.email }}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/{{ social.github }}" target="_blank" rel="noreferrer">
+                                    <i class="fab fa-github fa-3x media-circle" aria-hidden="true"></i>
+                                    @{{ social.github }}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/{{ social.linkedin }}/?locale=en_US"
+                                    target="_blank" rel="noreferrer">
+                                    <i class="fab fa-linkedin fa-3x media-circle" aria-hidden="true"></i>
+                                    @{{ social.linkedin }}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/{{ social.twitter }}" target="_blank" rel="noreferrer">
+                                    <i class="fab fa-twitter fa-3x media-circle" aria-hidden="true"></i>
+                                    @{{ social.twitter }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md">
+                        <img src="/img/qr.svg" alt="{{ title }}" style="width: 100%;" class="social-qr"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+{% endblock %}
