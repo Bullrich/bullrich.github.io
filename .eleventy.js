@@ -49,6 +49,10 @@ module.exports = config => {
         return [...collection.getFilteredByGlob('./src/blog/*.md')].reverse();
     });
 
+    config.addCollection('links', collection => {
+        return [...collection.getFilteredByGlob('./src/links/*.md')].reverse();
+    });
+
     config.addFilter("excerpt", (post) => {
         const content = post.replace(/(<([^>]+)>)/gi, "");
         return content.substr(0, content.lastIndexOf(" ", 200)) + "...";

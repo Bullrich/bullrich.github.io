@@ -1,0 +1,29 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<!-- taken from https://bootstrap-menu.com/detail-smart-hide.html -->
+<nav class="navbar smart-scroll navbar-expand-lg navbar-dark odd-section">
+  <div class="container">
+    <a class="navbar-brand" href="{{ '/' | url }}">Javier Bullrich</a>
+  </div>
+</nav>
+<div class="portfolio">
+  <section class="long-section even-section" id="title">
+    <div class="vertical-center align-point">
+      <div class="container">
+        <h1 style="font-size: 64px">{{ title }}</h1>
+        <p>
+          {{ content | safe }}
+        </p>
+        {% for post in collections.links %}
+        <h2><a href={{ post.data.url }} target="_blank">{{ post.data.title }}</a></h2>
+        <h6 style="font-size: 14px">{{ post.date | w3DateFilter }}</h6>
+        <p>{{ post.content | safe }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% include "footer.html" %}
+</div>
+{% endblock %}
