@@ -29,7 +29,7 @@
         {% for certification_item in udemy_certifications %}
         <h1>{{ certification_item.name }}</h1>
         <p><a href="https://www.udemy.com/certificate/{{ certification_item.key }}/">
-          <img class="diploma" src="{{ '/' | url }}/img/certifications/{{ certification_item.key }}.jpg">
+          <img class="diploma" src="{{ '/' | url }}img/certifications/{{ certification_item.key }}.jpg">
         </a></p>
         {% endfor %}
         {{ content | safe }}

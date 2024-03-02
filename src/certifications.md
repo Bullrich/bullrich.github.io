@@ -20,6 +20,8 @@ udemy_certifications:
     key: UC-e3f56884-a5c5-49df-b216-42ee8086068c
   - name: SVG & CSS Animations
     key: UC-4Y7GND7N
+  - name: Ultimate Rust Crash Course
+    key: UC-c3fe8613-5e45-4224-b9eb-868b2545c702
     
 ---
 
