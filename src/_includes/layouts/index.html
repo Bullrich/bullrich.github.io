@@ -162,18 +162,10 @@
         <div style="max-width: 270px">
           <h1 style="font-size: 36px">Other mentions</h1>
           <hr class="my-4">
-          <p>
-            <u>
-              <a href="{{ page.user.developer-story }}" target="_blank" rel="noreferrer">
-                See all of them in my developer story
-              </a>
-            </u>
-          </p>
         </div>
 
         <div style="margin: auto; max-width: 850px;">
           <div class="row">
-
             {% for portf in collections.portfolio %}
             {% if portf.data.featured != true %}
             <div class="col-lg-4 scroll-hidden">
