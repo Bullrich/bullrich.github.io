@@ -13,7 +13,7 @@ user:
   linkedin: javibullrich/?locale=en_US
 technologies:
   - Open AI
-  - Statecharts
+  - Ethereum
   - Solidity
   - Docker
   - SvelteKit
