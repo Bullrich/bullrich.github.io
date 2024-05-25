@@ -27,6 +27,7 @@ module.exports = config => {
 
     config.addPassthroughCopy('./src/img/');
     config.addPassthroughCopy('./src/css/fonts/');
+    config.addPassthroughCopy('./src/scripts/');
 
     config.setFrontMatterParsingOptions({ excerpt: true });
 

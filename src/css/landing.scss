@@ -1,0 +1,46 @@
+.scroll-hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+}
+
+.scroll-side {
+    transform: translateX(-100%);
+    transform: all 1s;
+}
+
+.scroll-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+    .scroll-hidden {
+        transition: none;
+    }
+}
+
+.scroll-delay:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.scroll-delay:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.scroll-delay:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.scroll-delay:nth-child(5) {
+    transition-delay: 700ms;
+}
+
+.scroll-delay:nth-child(6) {
+    transition-delay: 800ms;
+}
+
+.scroll-delay:nth-child(7) {
+    transition-delay: 900ms;
+}
