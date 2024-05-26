@@ -21,26 +21,28 @@
     }
 }
 
-.scroll-delay:nth-child(2) {
-    transition-delay: 200ms;
-}
+@media screen and (min-width: 800px) {
+    .scroll-delay:nth-child(2) {
+        transition-delay: 200ms;
+    }
 
-.scroll-delay:nth-child(3) {
-    transition-delay: 400ms;
-}
+    .scroll-delay:nth-child(3) {
+        transition-delay: 400ms;
+    }
 
-.scroll-delay:nth-child(4) {
-    transition-delay: 600ms;
-}
+    .scroll-delay:nth-child(4) {
+        transition-delay: 600ms;
+    }
 
-.scroll-delay:nth-child(5) {
-    transition-delay: 700ms;
-}
+    .scroll-delay:nth-child(5) {
+        transition-delay: 700ms;
+    }
 
-.scroll-delay:nth-child(6) {
-    transition-delay: 800ms;
-}
+    .scroll-delay:nth-child(6) {
+        transition-delay: 800ms;
+    }
 
-.scroll-delay:nth-child(7) {
-    transition-delay: 900ms;
+    .scroll-delay:nth-child(7) {
+        transition-delay: 900ms;
+    }
 }
