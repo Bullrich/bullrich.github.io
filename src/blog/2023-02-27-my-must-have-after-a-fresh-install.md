@@ -71,9 +71,9 @@ source $ZSH/oh-my-zsh.sh
 
 Finally, I install my most common used libs and apps
 
-`brew install ffmpeg mdv tldr tree yarn nvm deno gh imagemagick jq tree`
+`brew install mdv tldr tree yarn nvm deno gh imagemagick jq tree lazygit`
 
-`brew install --cask 1password docker google-chrome spotify firefox insomnia fork jetbrains-toolbox visual-studio-code`
+`brew install --cask 1password docker google-chrome arc cleanshot docker firefox postman fork jetbrains-toolbox visual-studio-code pinta`
 
 # Windows installation
 
