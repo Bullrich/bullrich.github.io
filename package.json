@@ -19,7 +19,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^5.0.0",
     "eleventy-sass": "^2.2.1",
     "fontawesome-free": "^1.0.4",
     "html-minifier": "^4.0.0",
