@@ -9,21 +9,7 @@
 
   {% include "layouts/navbar-new.html" %}
 
-  {# Vector Background Doodles #}
-  <div class="absolute inset-0 z-0 pointer-events-none opacity-20">
-    <svg class="absolute top-40 left-10 text-brand-orange animate-pulse-slow w-64 h-64" fill="currentColor"
-      viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="40" />
-    </svg>
-    <svg class="absolute top-1/4 right-20 text-white animate-float w-48 h-48" fill="none" stroke="currentColor"
-      stroke-width="2" viewBox="0 0 100 100">
-      <rect x="25" y="25" width="50" height="50" transform="rotate(45 50 50)" />
-    </svg>
-    <svg class="absolute bottom-1/3 left-1/4 text-brand-orange animate-wiggle w-96 h-96" fill="none"
-      stroke="currentColor" stroke-width="1" viewBox="0 0 100 100">
-      <path d="M10 50 Q 25 25 50 50 T 90 50" />
-    </svg>
-  </div>
+  {% include "partials/vector-doodles.html" %}
 
   <main class="container mx-auto max-w-4xl px-6 py-20 relative z-10 flex-grow">
 
