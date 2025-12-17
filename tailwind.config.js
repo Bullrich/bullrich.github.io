@@ -16,8 +16,13 @@ module.exports = {
                 'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                 'float': 'float 3s ease-in-out infinite',
                 'wiggle': 'wiggle 1s ease-in-out infinite',
+                'width-fill': 'widthFill 1s ease-out forwards',
             },
             keyframes: {
+                widthFill: {
+                    '0%': { width: '0%' },
+                    '100%': { width: '100%' },
+                },
                 fadeInRight: {
                     '0%': { opacity: '0', transform: 'translateX(-20px)' },
                     '100%': { opacity: '1', transform: 'translateX(0)' },
@@ -40,5 +45,7 @@ module.exports = {
             }
         },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography'),
+    ],
 }

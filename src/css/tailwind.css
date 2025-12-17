@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
     --color-brand-blue: #15202B;
@@ -18,5 +19,115 @@
         background-color: var(--color-brand-blue);
         color: white;
         font-family: var(--font-sans);
+    }
+
+    /* Custom Prose Wrapper for Projects */
+    .prose-project {
+        @apply prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:text-brand-orange prose-a:text-brand-orange prose-a:underline prose-code:text-brand-purple prose-code:bg-gray-800 prose-code:rounded prose-code:px-1 prose-pre:bg-gray-800 prose-pre:text-gray-100 prose-pre:overflow-x-auto prose-pre:rounded-xl prose-pre:border-2 prose-pre:border-white/20 prose-pre:p-4 prose-img:rounded-xl prose-img:border-2 prose-img:border-white/20 prose-img:shadow-lg leading-relaxed;
+    }
+
+    .prose-project a:hover {
+        @apply bg-brand-orange text-brand-blue no-underline rounded px-1 transition-all duration-200;
+    }
+
+    /* Remove backticks from inline code */
+    .prose-project :where(code):not(:where([class~="not-prose"] *))::before {
+        content: none !important;
+    }
+
+    .prose-project :where(code):not(:where([class~="not-prose"] *))::after {
+        content: none !important;
+    }
+
+    /* Syntax Highlighting (Okaidia/Atom Dark Style) */
+    code[class*="language-"],
+    pre[class*="language-"] {
+        color: #f8f8f2;
+        text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+        tab-size: 4;
+        hyphens: none;
+    }
+
+    /* Token Colors */
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        color: #8292a2;
+    }
+
+    .token.punctuation {
+        color: #f8f8f2;
+    }
+
+    .token.namespace {
+        opacity: .7;
+    }
+
+    .token.property,
+    .token.tag,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+        color: #f92672;
+    }
+
+    .token.boolean,
+    .token.number {
+        color: #ae81ff;
+    }
+
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted {
+        color: #a6e22e;
+    }
+
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string,
+    .token.variable {
+        color: #f8f8f2;
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.function,
+    .token.class-name {
+        color: #e6db74;
+    }
+
+    .token.keyword {
+        color: #66d9ef;
+    }
+
+    .token.regex,
+    .token.important {
+        color: #fd971f;
+    }
+
+    .token.important,
+    .token.bold {
+        font-weight: bold;
+    }
+
+    .token.italic {
+        font-style: italic;
+    }
+
+    .token.entity {
+        cursor: help;
     }
 }
