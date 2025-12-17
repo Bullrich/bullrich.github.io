@@ -8,9 +8,21 @@ This project is a personal portfolio website built with **Eleventy (11ty)**, a s
 - **Static Site Generator**: [Eleventy](https://www.11ty.dev/)
 - **Templating Engine**: Nunjucks (`.njk`) is used for HTML, Markdown, and Data.
 - **Styling**:
-  - **Bootstrap 5**: Used for the component library and grid system.
-  - **SCSS**: Custom styles are written in SCSS and processed by `eleventy-sass`.
+  - **Tailwind CSS V4**: Replaces Bootstrap for all styling. Configured with a `flat`, `neobrutalist` theme.
+  - **SCSS**: Custom styles are written in SCSS and processed by `eleventy-sass` (minimal usage now).
   - **FontAwesome**: Used for icons.
+
+### Design System
+- **Style**: Neobrutalist / "Goofy Flat".
+- **Colors**:
+    - **Brand Blue**: `#0d1b2a` (Backgrounds, Text)
+    - **Brand Orange**: `#f95738` (Accents, Highlights, Borders)
+    - **White**: `#ffffff` (Text, Borders)
+- **Key Elements**:
+    - **Shapes**: Rounded "blob" corners, rotated cards, offset backgrounds.
+    - **Vector Art**: Simple SVG doodles (circles, squares, paths) in the background.
+    - **Interactions**: Hard shadows (`box-shadow`), slight rotations that straighten on hover, high-contrast hover states.
+    - **Typography**: Bold, uppercase headers (Sans Serif).
 
 ### Directory Structure
 - **`src/`**: The source directory containing all content and templates.

@@ -1,195 +1,326 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/base-new.html" %}
 
 {% block content %}
-{% include "navbar.html" %}
+<div id="top"
+    class="h-screen w-screen flex flex-col justify-center items-center relative overflow-hidden bg-brand-blue border-b border-brand-orange/20">
 
-<link rel="stylesheet" href="{{ '/css/landing.css' | url }}">
-<script defer src="/scripts/landing.js"></script>
-<div class="portfolio">
+    {# Hero Background Doodles #}
+    <div class="absolute inset-0 z-0 pointer-events-none opacity-20">
+        <svg class="absolute top-1/8 left-1/5 text-brand-orange animate-pulse-slow w-48 h-48" fill="currentColor"
+            viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" />
+        </svg>
+        <svg class="absolute bottom-1/6 left-1/4 text-white animate-float w-32 h-32" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 100 100">
+            <rect x="25" y="25" width="50" height="50" transform="rotate(45 50 50)" />
+        </svg>
+        <svg class="absolute top-1/5 md:top-1/3 right-1/3 text-brand-orange animate-wiggle w-64 h-64" fill="none"
+            stroke="currentColor" stroke-width="2" viewBox="0 0 100 100">
+            <path d="M10 50 Q 25 25 50 50 T 90 50" />
+        </svg>
+    </div>
 
+    {# Mobile Layout: Vertical Stack #}
+    {# Desktop Layout: Horizontal Row #}
 
-  <section class="portfolio-section odd-section" id="title">
-    <div class="vertical-center align-point">
-      <div class="container">
-        <div style="font-size: 3em;">Hi, I am</div>
-        <div class="portfolio-name scroll-side scroll-hidden">{{ user.name }}.</div>
-        <div class="portfolio-slogan">I create experiences.</div>
-        <p style="font-size: 24px; width: 70%">{{ description }}</p>
-        <a href="mailto:{{ user.email }}" target="_blank">
-          <i class="fa fa-envelope fa-3x media-circle" aria-hidden="true"></i>
+    <div
+        class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between h-full z-10 relative pointer-events-none p-6">
+
+        {# Text Section #}
+        <div
+            class="w-full md:w-1/2 text-center md:text-left mt-8 md:mt-0 animate-fade-in-right delay-150 z-20 mb-auto md:mb-0 pt-20 md:pt-0 pointer-events-auto">
+            <h1 class="text-6xl md:text-8xl font-black text-brand-orange mb-2 tracking-tighter uppercase font-sans">
+                <span class="text-white hover:text-brand-orange transition-colors duration-300">Javier</span>
+                <span
+                    class="text-brand-orange hover:bg-brand-orange hover:text-brand-blue transition-all duration-300 px-2 rounded-lg inline-block">Bullrich</span>
+            </h1>
+
+            <div class="flex justify-center md:justify-start gap-6">
+                <a href="mailto:{{ user.email }}"
+                    class="text-white hover:text-brand-orange transition-colors duration-300 transform hover:scale-110">
+                    <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/{{ user.github }}"
+                    class="text-white hover:text-brand-orange transition-colors duration-300 transform hover:scale-110"
+                    target="_blank">
+                    <i class="fab fa-github-alt fa-3x" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/{{ user.linkedin }}"
+                    class="text-white hover:text-brand-orange transition-colors duration-300 transform hover:scale-110"
+                    target="_blank">
+                    <i class="fab fa-linkedin fa-3x" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    {# Image Section #}
+    <div
+        class="absolute bottom-0 right-0 flex justify-end pointer-events-none md:w-1/2 animate-fade-in-up z-0 w-full overflow-hidden md:overflow-visible mix-blend-normal">
+        <img src="{{ '/img/javier_half.png' | url }}" alt="Javier Bullrich"
+            class="w-[120%] max-w-none translate-x-[20%] translate-y-[10%] md:w-[600px] lg:w-[700px] md:object-contain md:drop-shadow-2xl md:translate-x-10 md:translate-y-10 md:max-w-full hover:scale-105 transition-transform duration-700 ease-in-out pointer-events-auto">
+    </div>
+
+    {# Scroll Indicator #}
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-brand-orange z-50">
+        <a href="#navbar" class="text-brand-orange hover:text-white transition-colors">
+            <i class="fa fa-chevron-down fa-3x drop-shadow-md"></i>
         </a>
-        <a href="https://github.com/{{ user.github }}" rel="noreferrer" target="_blank">
-          <i class="fab fa-github-alt fa-3x media-circle" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/{{ user.linkedin }}" rel="noreferrer" target="_blank">
-          <i class="fab fa-linkedin fa-3x media-circle" aria-hidden="true"></i>
-        </a>
-      </div>
     </div>
-  </section>
 
-  <section class="portfolio-section even-section" id="about">
-    <div class="vertical-center align-point">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="{{ image }}" alt="profile" class="about-img img-float scroll-side scroll-hidden">
-          </div>
-          <div class="col-lg-6">
-            <h1 style="font-size: 64px">About me</h1>
-            <hr class="my-2">
-            {{ content | safe }}
-            <ul class="skill-container">
-              {% for tech in technologies %}
-              <li class="skill-detail">{{ tech }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-        <div class="tech-stack row">
-          <div class="col-md-2 scroll-side scroll-hidden scroll-delay">
-            <div class="tech-container img-float row text-center">
-              <img src="{{ '/img/stack/svelte.svg' | url }}" alt="tech" class="tech-pic mx-auto d-block" />
-            </div>
-          </div>
-
-          <div class="col-md-2 scroll-side scroll-hidden scroll-delay">
-            <div class="tech-container img-float">
-              <img src="{{ '/img/stack/chatgpt-icon.webp' | url }}" alt="tech" class="tech-pic mx-auto d-block" />
-            </div>
-          </div>
-
-          <div class="col-md-2 scroll-side scroll-hidden scroll-delay">
-            <div class="tech-container img-float">
-              <img src="{{ '/img/stack/flutter-logo.png' | url }}" alt="tech" class="tech-pic mx-auto d-block" />
-            </div>
-          </div>
-
-          <div class="col-md-2 scroll-side scroll-hidden scroll-delay">
-            <div class="tech-container img-float">
-              <img src="{{ '/img/stack/docker-logo.png' | url }}" alt="tech" class="tech-pic mx-auto d-block" />
-            </div>
-          </div>
-
-          <div class="col-md-2 scroll-side scroll-hidden scroll-delay">
-            <div class="tech-container img-float">
-              <img src="{{ '/img/stack/typescript-logo.png' | url }}" alt="tech" class="tech-pic mx-auto d-block" />
-            </div>
-          </div>
-
-          <div class="col-md-2 scroll-side scroll-hidden scroll-delay">
-            <div class="tech-container img-float">
-              <img src="{{ '/img/stack/rust-logo.svg' | url }}" alt="tech" class="tech-pic mx-auto d-block" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="odd-section long-section" id="experience">
-
-    <div class="vertical-center">
-      <div class="container">
-        <div style="max-width: 450px">
-          <h1 class="section-header">Where I worked</h1>
-          <hr class="my-2 even">
-        </div>
-        <br class="divider" />
-
-        {% for job in collections.employment %}
-        <div class="xp-card scroll-hidden">
-          <div class="xp-card-upper-title">
-            <div class="xp-card-title" style="float:left">
-              <a href="{{ job.data.website }}">{{ job.data.company }}</a>
-            </div>
-            <span class="xp-card-time">{{ job.data.duration }}</span>
-          </div>
-          <hr class="my-2 even">
-          <div class="xp-card-title">{{ job.data.title }}</div>
-          <p>{{ job.content | safe }}</p>
-          <ul class="skill-container">
-            {% for job_tech in job.data.technologies %}
-            <li class="skill-detail">{{ job_tech }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-
-        {% if loop.last == false %}
-        <div class="xp-line-container">
-          <div class="xp-line"></div>
-        </div>
-        {% endif %}
-
-        {% endfor %}
-
-      </div>
-    </div>
-  </section>
-
-  <section class="even-section long-section" id="work">
-    <div class="vertical-center">
-      <div class="container">
-        <div style="max-width: 550px">
-          <h1 class="section-header">Some things I built</h1>
-          <hr class="my-2">
-        </div>
-        <div class="row" style="margin-bottom: 100px;">
-          {% for portf in collections.featured %}
-          <div class="col-lg-4 scroll-side scroll-hidden scroll-delay">
-            <a href="{% if portf.data.link %}{{ portf.data.link }}{% else %}{{ portf.url }}{% endif %}"
-              class="hovering-link" rel="noreferrer">
-              <div class="featured-container">
-                <div class="featured-image-container">
-                  <img class="featured-image" src="{{ '/img/portfolio/' | url }}{{ portf.data.image }}"
-                    alt="{{ portf.data.title }}" />
-                </div>
-                <div class="featured-text-container work-text-container work-text-content">
-                  <h3>{{ portf.data.title }}</h3>
-                  <p>{{ portf.data.description }}</p>
-                  <div class="middle-color">{{ portf.data.technology }}</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          {% endfor %}
-
-
-
-        </div>
-
-        <div style="max-width: 270px">
-          <h1 style="font-size: 36px">Other mentions</h1>
-          <hr class="my-4">
-        </div>
-
-        <div style="margin: auto; max-width: 850px;">
-          <div class="row">
-            {% for portf in collections.portfolio %}
-            {% if portf.data.featured != true %}
-            <div class="col-lg-4 scroll-hidden">
-              <a href="{% if portf.data.link %}{{ portf.data.link }}{% else %}{{ portf.url }}{% endif %}"
-                rel="noreferrer">
-                <div class="work-text-container">
-                  <div class="centered-content work-text-content" style="width: 90%;">
-                    <h3>{{ portf.data.title }}</h3>
-                    <p>{{ portf.data.description }}</p>
-                    <div class="middle-color">{{ portf.data.technology }}</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {% include "footer.html" %}
 </div>
 
+{% include "layouts/navbar-new.html" %}
+
+<section id="about" class="bg-brand-blue relative z-20 py-20 px-6">
+    <div class="container mx-auto max-w-4xl">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            {# Image Section #}
+            <div class="w-full md:w-1/3 flex justify-center">
+                <div class="relative group">
+                    {# Abstract Background Shape (Illustrator Style) #}
+                    <div
+                        class="absolute inset-0 bg-brand-orange/20 rounded-blob transform rotate-6 scale-110 group-hover:rotate-12 transition-transform duration-500">
+                    </div>
+
+                    {# Image #}
+                    <img src="{{ image }}" alt="Javier Bullrich"
+                        class="relative z-10 rounded-xl border-1 border-brand-orange w-48 h-48 md:w-64 md:h-64 object-cover rounded-blob shadow-xl transform transition-transform duration-500 group-hover:-translate-y-4">
+                </div>
+            </div>
+
+            {# Content #}
+            <div class="w-full md:w-2/3">
+                <h2
+                    class="text-4xl md:text-5xl font-bold text-white mb-8 border-b-2 border-brand-orange/50 pb-4 inline-block">
+                    About me
+                </h2>
+                <div class="prose prose-lg prose-invert text-gray-300 mb-12 max-w-none">
+                    {{ content | safe }}
+                </div>
+
+                <h3 class="text-2xl font-bold text-white mb-6">Technologies</h3>
+                <ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {% for tech in technologies %}
+                    <li class="flex items-center text-gray-300 hover:text-brand-orange transition-colors duration-300">
+                        <span class="text-brand-orange mr-2">▹</span> {{ tech }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="bg-brand-orange/10 relative z-20 py-20 px-6 overflow-hidden">
+    {# Background Decoration #}
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-10">
+        <svg class="absolute top-10 right-10 w-64 h-64 text-brand-orange animate-spin-slow" viewBox="0 0 100 100"
+            fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M50 0 L100 50 L50 100 L0 50 Z" />
+        </svg>
+        <svg class="absolute bottom-10 left-10 w-48 h-48 text-brand-orange animate-bounce" viewBox="0 0 100 100"
+            fill="currentColor">
+            <circle cx="50" cy="50" r="40" />
+        </svg>
+    </div>
+
+    <div class="container mx-auto max-w-6xl relative z-10">
+        <h2
+            class="text-4xl md:text-6xl font-black text-brand-orange mb-16 text-center tracking-tighter uppercase transform -rotate-2">
+            Where I Worked
+        </h2>
+
+        <div class="grid grid-cols-1 gap-8 md:gap-12">
+            {% for job in collections.employment %}
+            <div
+                class="group relative transition-all duration-300 transform md:hover:-translate-y-2 md:hover:rotate-0 {% if loop.index0 % 2 == 0 %}-rotate-1{% else %}rotate-1{% endif %}">
+                {# Card Shadow (Brutalism) #}
+                <div
+                    class="absolute inset-0 bg-brand-orange rounded-2xl translate-x-2 translate-y-2 md:group-hover:translate-x-4 md:group-hover:translate-y-4 transition-transform duration-300">
+                </div>
+
+                {# Card Content #}
+                <div
+                    class="relative bg-gray-900 border-4 border-white rounded-2xl p-5 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-stretch h-full">
+                    {# Title & Company #}
+                    <div
+                        class="w-full md:w-auto md:min-w-[200px] md:max-w-[250px] border-b-4 md:border-b-0 md:border-r-4 border-white/20 pb-4 md:pb-0 md:pr-6 flex flex-col justify-center shrink-0">
+                        <a href="{{ job.data.website }}" target="_blank"
+                            class="text-2xl font-black text-brand-orange hover:text-white mb-2 block uppercase tracking-wide transition-colors">
+                            {{ job.data.company }}
+                        </a>
+                        <h3 class="text-lg font-bold text-white mb-4">{{ job.data.title }}</h3>
+
+                        <span
+                            class="inline-block bg-brand-blue text-white border border-white/30 font-bold px-3 py-1 rounded-full text-sm transform -rotate-2 md:group-hover:rotate-0 transition-transform w-max">
+                            {{ job.data.duration }}
+                        </span>
+                    </div>
+
+                    {# Description #}
+                    <div class="w-full flex-1 flex items-center">
+                        <div class="prose prose-invert text-lg font-medium leading-relaxed max-w-none">
+                            {{ job.templateContent | safe }}
+                        </div>
+                    </div>
+
+                    {# Tech Tags (Right on Desktop, Bottom on Mobile) #}
+                    {% if job.data.technologies %}
+                    <div
+                        class="w-full md:w-[180px] shrink-0 border-t-4 md:border-t-0 md:border-l-4 border-white/20 pt-4 md:pt-0 md:pl-6 flex flex-row md:flex-col gap-2 justify-center content-start flex-wrap">
+                        {% for tech in job.data.technologies %}
+                        <span
+                            class="inline-block px-3 py-1 bg-brand-blue text-white font-bold border-2 border-white/50 rounded-lg text-sm text-center transform transition-all cursor-default shadow-sm md:hover:shadow-md md:hover:z-10 md:hover:scale-105 md:hover:bg-brand-orange md:hover:border-white md:hover:rotate-0 {% if loop.index0 % 2 == 0 %}rotate-1{% else %}-rotate-1{% endif %} w-max self-center">
+                            {{ tech }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+</section>
+
+<section id="work" class="bg-brand-blue relative z-20 py-20 px-6 overflow-hidden">
+    {# Vector Art Background (Desktop Only) #}
+    <div class="hidden md:block absolute inset-0 z-0 pointer-events-none opacity-20">
+        <svg class="absolute top-20 left-20 w-32 h-32 text-brand-orange animate-pulse-slow" viewBox="0 0 100 100"
+            fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="10" y="10" width="80" height="80" transform="rotate(15 50 50)" />
+        </svg>
+        <svg class="absolute bottom-40 right-20 w-48 h-48 text-white animate-float" viewBox="0 0 100 100" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <circle cx="50" cy="50" r="40" />
+        </svg>
+        <svg class="absolute top-1/2 left-1/2 w-64 h-64 text-brand-orange/50 animate-wiggle" viewBox="0 0 100 100"
+            fill="none" stroke="currentColor" stroke-width="1">
+            <path d="M10 50 Q 25 25 50 50 T 90 50" />
+        </svg>
+    </div>
+
+    <div class="container mx-auto max-w-6xl relative z-10">
+        {# Featured Projects Header #}
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-16 text-center tracking-tighter uppercase">
+            Some things I built
+        </h2>
+
+        {# Featured Projects Grid #}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-32">
+            {% for portf in collections.featured %}
+            <a href="{% if portf.data.link %}{{ portf.data.link }}{% else %}{{ portf.url }}{% endif %}" target="_blank"
+                class="group block relative">
+                {# Offset Background (Neobrutalist Shadow) #}
+                <div
+                    class="absolute inset-0 bg-brand-orange rounded-2xl translate-x-3 translate-y-3 group-hover:translate-x-5 group-hover:translate-y-5 transition-transform duration-300">
+                </div>
+
+                {# Card #}
+                <div
+                    class="relative bg-gray-900 border-4 border-white rounded-2xl p-6 h-full flex flex-col items-center text-center transition-transform duration-300 md:group-hover:-translate-y-1">
+                    {# Image container with illustration feel #}
+                    <div class="relative w-full aspect-square mb-6 flex items-center justify-center">
+                        {# Background Shape #}
+                        <div
+                            class="absolute inset-4 bg-brand-orange/20 rounded-blob transform rotate-12 group-hover:rotate-45 transition-transform duration-700">
+                        </div>
+
+                        {# Project Image #}
+                        <img src="{{ '/img/portfolio/' | url }}{{ portf.data.image }}" alt="{{ portf.data.title }}"
+                            class="relative z-10 w-3/4 h-3/4 object-contain drop-shadow-xl transform group-hover:scale-110 transition-transform duration-300 rounded-2xl bg-white p-2 border-2 border-black/10">
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-brand-orange transition-colors">{{
+                        portf.data.title }}</h3>
+                    <p class="text-gray-300 text-sm mb-4 line-clamp-3">{{ portf.data.description }}</p>
+                    <div class="mt-auto">
+                        <span
+                            class="inline-block px-2 py-1 bg-brand-orange text-white text-xs font-bold uppercase tracking-wider rounded border border-white/20">
+                            {{ portf.data.technology }}
+                        </span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+
+        {# Other Mentions Header #}
+        <h2
+            class="text-3xl md:text-5xl font-black text-white mb-12 text-center tracking-tighter uppercase relative inline-block left-1/2 transform -translate-x-1/2 border-b-4 border-brand-orange pb-2">
+            Other Mentions
+        </h2>
+
+        {# Other Mentions Grid #}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for portf in collections.portfolio %}
+            {% if portf.data.featured != true %}
+            <a href="{% if portf.data.link %}{{ portf.data.link }}{% else %}{{ portf.url }}{% endif %}" target="_blank"
+                class="group block relative h-full">
+                {# Offset Background #}
+                <div
+                    class="absolute inset-0 bg-white/10 rounded-xl translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300">
+                </div>
+
+                {# Card #}
+                <div
+                    class="relative bg-gray-800 border-2 border-white/20 rounded-xl p-6 h-full flex flex-col transition-all duration-300 group-hover:border-brand-orange group-hover:bg-gray-750">
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-orange transition-colors">{{
+                        portf.data.title }}</h3>
+                    <p class="text-gray-400 text-sm mb-4 flex-1">{{ portf.data.description }}</p>
+                    <div class="text-left">
+                        <span class="text-xs text-brand-orange font-bold uppercase tracking-wider">{{
+                            portf.data.technology }}</span>
+                    </div>
+                </div>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{# Custom Animation Styles (inline for now, or move to tailwind config) #}
+<style>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-right {
+        animation: fadeInRight 0.8s ease-out forwards;
+        opacity: 0;
+        /* Starts hidden */
+    }
+
+    .delay-150 {
+        animation-delay: 150ms;
+    }
+</style>
 {% endblock %}

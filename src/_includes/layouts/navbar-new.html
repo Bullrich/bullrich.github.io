@@ -1,0 +1,29 @@
+<nav class="relative md:sticky md:top-0 z-50 bg-brand-blue/95 backdrop-blur-sm border-b border-brand-orange/20 shadow-lg"
+    id="navbar">
+    <div class="container mx-auto max-w-6xl px-6 py-4">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+            {# Mobile Header with Brand and Toggle (Toggle hidden for now as we just stack on mobile) #}
+            {# Actually, for mobile "vertical and not move at all" implies a static list below hero? or just standard
+            static navbar? #}
+            {# User: "On mobile it should just show the same options but vertical and not move at all." #}
+            {# This likely means simplified display. I'll make a simple list for mobile, flex row for desktop. #}
+
+            <div class="hidden md:block text-2xl font-bold text-brand-orange uppercase tracking-tight">
+                <a href="#top">Javier Bullrich</a>
+            </div>
+
+            <ul
+                class="flex flex-col md:flex-row gap-4 md:gap-8 text-lg font-medium mt-4 md:mt-0 items-center md:items-end w-full md:w-auto">
+                <li><a href="#about"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">About</a></li>
+                <li><a href="#experience"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">Experience</a>
+                </li>
+                <li><a href="#work"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">Work</a></li>
+                <li><a href="{{ '/blog' | url }}"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

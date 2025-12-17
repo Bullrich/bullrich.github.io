@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/font-awesome.css' | url }}">
+    {% include "analytics.html" %}
+</head>
+
+<body class="bg-brand-blue text-white font-sans antialiased selection:bg-brand-orange selection:text-white">
+    {% block content %}
+    {% endblock %}
+    {% include "footer.html" %}
+</body>
+
+</html>
