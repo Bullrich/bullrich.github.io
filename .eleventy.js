@@ -13,8 +13,9 @@ module.exports = config => {
     config.on('eleventy.after', async ({ dir }) => {
         console.log("dir", dir);
         qr.toFile(`${dir.output}/img/qr.svg`, 'https://bullrich.dev/social', {
-            width: 200, margin: 0, color: {
-                light: '#0000'
+            width: 200, margin: 1, color: {
+                light: '#ffffffff',
+                dark: '#000000ff'
             }
         }, function (err) {
             if (err) throw err;

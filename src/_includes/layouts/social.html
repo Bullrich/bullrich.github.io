@@ -1,67 +1,86 @@
 {% extends "layouts/base.html" %}
 
-{% if image %}
-{% set socialImage = image %}
-{% endif %}
-
 {% block content %}
+<div class="bg-brand-blue h-screen flex flex-col relative overflow-hidden">
 
-<nav class="navbar smart-scroll navbar-expand-lg navbar-dark odd-section">
-    <div class="container">
-        <a class="navbar-brand" href="{{ '/' | url }}">Javier Bullrich</a>
-    </div>
-</nav>
-<div class="portfolio">
-    <section class="long-section even-section" id="social">
-        <div class="vertical-center align-point">
-            <div class="container">
-                <h1 class="article-title mb-5">{{title}}</h1>
+    {% include "partials/vector-doodles.html" %}
 
-                <div class="row">
-                    <div class="col-md">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="{{ site.url }}" target="_blank" rel="noreferrer">
-                                    <i class="fa fa-blog fa-3x media-circle" aria-hidden="true"></i>
-                                    {{ site.url }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:{{ social.email }}" target="_blank" rel="noreferrer">
-                                    <i class="fa fa-envelope fa-3x media-circle" aria-hidden="true"></i>
-                                    {{ social.email }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/{{ social.github }}" target="_blank" rel="noreferrer">
-                                    <i class="fab fa-github fa-3x media-circle" aria-hidden="true"></i>
-                                    @{{ social.github }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/{{ social.linkedin }}/?locale=en_US"
-                                    target="_blank" rel="noreferrer">
-                                    <i class="fab fa-linkedin fa-3x media-circle" aria-hidden="true"></i>
-                                    @{{ social.linkedin }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.twitter.com/{{ social.twitter }}" target="_blank" rel="noreferrer">
-                                    <i class="fab fa-twitter fa-3x media-circle" aria-hidden="true"></i>
-                                    @{{ social.twitter }}
-                                </a>
-                            </li>
-                        </ul>
+    {# Single screen social links with QR code #}
+    <main class="flex-grow flex items-center justify-center px-6 py-12 relative z-10">
+
+        <div class="max-w-5xl w-full">
+            {# Title #}
+            <h1
+                class="text-4xl md:text-6xl font-black text-brand-orange mb-8 md:mb-12 text-center tracking-tighter uppercase">
+                {{ title }}
+            </h1>
+
+            {# Content Grid: Links on left, QR on right (stack on mobile) #}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+                {# Social Links #}
+                <div class="space-y-4">
+                    <a href="{{ site.url }}" target="_blank" rel="noreferrer"
+                        class="group flex items-center gap-4 bg-gray-900 border-4 border-white rounded-2xl p-4 hover:bg-brand-orange hover:scale-105 transition-all duration-300 relative">
+                        <div
+                            class="absolute inset-0 bg-brand-orange rounded-xl translate-x-1 translate-y-1 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 -z-10">
+                        </div>
+                        <i class="fa fa-blog fa-2x text-brand-orange group-hover:text-white"></i>
+                        <span class="text-white font-bold text-lg">{{ site.url }}</span>
+                    </a>
+
+                    <a href="mailto:{{ social.email }}" target="_blank" rel="noreferrer"
+                        class="group flex items-center gap-4 bg-gray-900 border-4 border-white rounded-2xl p-4 hover:bg-brand-orange hover:scale-105 transition-all duration-300 relative">
+                        <div
+                            class="absolute inset-0 bg-brand-orange rounded-xl translate-x-1 translate-y-1 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 -z-10">
+                        </div>
+                        <i class="fa fa-envelope fa-2x text-brand-orange group-hover:text-white"></i>
+                        <span class="text-white font-bold text-lg">{{ social.email }}</span>
+                    </a>
+
+                    <a href="https://github.com/{{ social.github }}" target="_blank" rel="noreferrer"
+                        class="group flex items-center gap-4 bg-gray-900 border-4 border-white rounded-2xl p-4 hover:bg-brand-orange hover:scale-105 transition-all duration-300 relative">
+                        <div
+                            class="absolute inset-0 bg-brand-orange rounded-xl translate-x-1 translate-y-1 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 -z-10">
+                        </div>
+                        <i class="fab fa-github fa-2x text-brand-orange group-hover:text-white"></i>
+                        <span class="text-white font-bold text-lg">@{{ social.github }}</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/{{ social.linkedin }}/?locale=en_US" target="_blank"
+                        rel="noreferrer"
+                        class="group flex items-center gap-4 bg-gray-900 border-4 border-white rounded-2xl p-4 hover:bg-brand-orange hover:scale-105 transition-all duration-300 relative">
+                        <div
+                            class="absolute inset-0 bg-brand-orange rounded-xl translate-x-1 translate-y-1 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 -z-10">
+                        </div>
+                        <i class="fab fa-linkedin fa-2x text-brand-orange group-hover:text-white"></i>
+                        <span class="text-white font-bold text-lg">@{{ social.linkedin }}</span>
+                    </a>
+
+                    <a href="https://www.twitter.com/{{ social.twitter }}" target="_blank" rel="noreferrer"
+                        class="group flex items-center gap-4 bg-gray-900 border-4 border-white rounded-2xl p-4 hover:bg-brand-orange hover:scale-105 transition-all duration-300 relative">
+                        <div
+                            class="absolute inset-0 bg-brand-orange rounded-xl translate-x-1 translate-y-1 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 -z-10">
+                        </div>
+                        <i class="fab fa-twitter fa-2x text-brand-orange group-hover:text-white"></i>
+                        <span class="text-white font-bold text-lg">@{{ social.twitter }}</span>
+                    </a>
+                </div>
+
+                {# QR Code #}
+                <div class="group relative">
+                    <div
+                        class="absolute inset-0 bg-white rounded-2xl translate-x-3 translate-y-3 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-300">
                     </div>
-
-                    <div class="col-md">
-                        <img src="/img/qr.svg" alt="{{ title }}" style="width: 100%;" class="social-qr"></img>
+                    <div
+                        class="relative bg-gray-900 border-4 border-white rounded-2xl p-8 flex items-center justify-center">
+                        <img src="/img/qr.svg" alt="{{ title }}" class="w-full max-w-sm">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+    </main>
+
 </div>
-
-
 {% endblock %}
