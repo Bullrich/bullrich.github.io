@@ -21,8 +21,32 @@ module.exports = config => {
         });
     });
 
+    // Build Tailwind CSS
+    config.on('eleventy.before', async () => {
+        const path = require('path');
+        const fs = require('fs');
+        const postcss = require('postcss');
+        // Dynamic import for ESM module support in CJS
+        const { default: tailwindcss } = await import('@tailwindcss/postcss');
+
+        const tailwindInputPath = path.resolve('./src/css/tailwind.css');
+        const tailwindOutputPath = './dist/css/style.css';
+        const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
+        const outputDir = path.dirname(tailwindOutputPath);
+
+        if (!fs.existsSync(outputDir)) {
+            fs.mkdirSync(outputDir, { recursive: true });
+        }
+
+        const result = await postcss([tailwindcss()]).process(cssContent, {
+            from: tailwindInputPath,
+            to: tailwindOutputPath,
+        });
+
+        fs.writeFileSync(tailwindOutputPath, result.css);
+    });
+
     config.addPassthroughCopy({ "./node_modules/fontawesome-free/webfonts": "css/webfonts" });
-    config.addPassthroughCopy({ "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "js/bootstrap.bundle.min.js" });
     config.addPassthroughCopy({ "./node_modules/jquery/dist/jquery.min.js": "js/jquery.min.js" });
 
     config.addPassthroughCopy('./src/img/');
