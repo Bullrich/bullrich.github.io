@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "prismjs/themes/prism-okaidia.css";
 @plugin "@tailwindcss/typography";
 
 @theme {
@@ -23,7 +24,26 @@
 
     /* Custom Prose Wrapper for Projects */
     .prose-project {
-        @apply prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:text-brand-orange prose-a:text-brand-orange prose-a:underline prose-code:text-brand-purple prose-code:bg-gray-800 prose-code:rounded prose-code:px-1 prose-pre:bg-gray-800 prose-pre:text-gray-100 prose-pre:overflow-x-auto prose-pre:rounded-xl prose-pre:border-2 prose-pre:border-white/20 prose-pre:p-4 prose-img:rounded-xl prose-img:border-2 prose-img:border-white/20 prose-img:shadow-lg leading-relaxed;
+        @apply prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:text-brand-orange prose-a:text-brand-orange prose-a:underline prose-img:rounded-xl prose-img:border-2 prose-img:border-white/20 prose-img:shadow-lg leading-relaxed;
+    }
+
+    .prose-project pre {
+        @apply !bg-gray-900 !rounded-xl !border-2 !border-white/20 !p-4 !my-8;
+        /* Robust overflow handling for mobile Safari */
+        display: block !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .prose-project code {
+        @apply !px-1 !rounded;
+    }
+
+    /* Fallback for inline code color if not in a syntax block */
+    .prose-project code:not([class*="language-"]) {
+        @apply !text-brand-purple !bg-gray-800;
     }
 
     .prose-project a:hover {
@@ -39,95 +59,29 @@
         content: none !important;
     }
 
-    /* Syntax Highlighting (Okaidia/Atom Dark Style) */
-    code[class*="language-"],
-    pre[class*="language-"] {
-        color: #f8f8f2;
-        text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-        text-align: left;
-        white-space: pre;
-        word-spacing: normal;
-        word-break: normal;
-        word-wrap: normal;
-        line-height: 1.5;
-        tab-size: 4;
-        hyphens: none;
+    /* Standard code blocks override for alignment and wrapping - Focus on Safari compatibility */
+    .prose-project pre[class*="language-"] {
+        display: block !important;
+        white-space: pre !important;
+        word-wrap: normal !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+        hyphens: none !important;
     }
 
-    /* Token Colors */
-    .token.comment,
-    .token.prolog,
-    .token.doctype,
-    .token.cdata {
-        color: #8292a2;
+    .prose-project code[class*="language-"] {
+        @apply !p-0 !bg-transparent !text-inherit !shadow-none;
+        display: block !important;
+        /* Force block for better Safari scrolling if nested */
+        white-space: pre !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
     }
 
-    .token.punctuation {
-        color: #f8f8f2;
-    }
-
-    .token.namespace {
-        opacity: .7;
-    }
-
-    .token.property,
-    .token.tag,
-    .token.constant,
-    .token.symbol,
-    .token.deleted {
-        color: #f92672;
-    }
-
-    .token.boolean,
-    .token.number {
-        color: #ae81ff;
-    }
-
-    .token.selector,
-    .token.attr-name,
-    .token.string,
-    .token.char,
-    .token.builtin,
-    .token.inserted {
-        color: #a6e22e;
-    }
-
-    .token.operator,
-    .token.entity,
-    .token.url,
-    .language-css .token.string,
-    .style .token.string,
-    .token.variable {
-        color: #f8f8f2;
-    }
-
-    .token.atrule,
-    .token.attr-value,
-    .token.function,
-    .token.class-name {
-        color: #e6db74;
-    }
-
-    .token.keyword {
-        color: #66d9ef;
-    }
-
-    .token.regex,
-    .token.important {
-        color: #fd971f;
-    }
-
-    .token.important,
-    .token.bold {
-        font-weight: bold;
-    }
-
-    .token.italic {
-        font-style: italic;
-    }
-
-    .token.entity {
-        cursor: help;
+    /* Fixed inline code line break */
+    .prose-project code:not(pre code) {
+        overflow-wrap: break-word !important;
+        white-space: pre-wrap !important;
+        word-break: break-all !important;
     }
 }
