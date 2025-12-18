@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    {% include "head.html" %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
     {% include "partials/metadata.html" %}
-    <link rel="stylesheet" href="{{ '/css/navbar.css' | url }}">
-    <link rel="alternate" type="application/rss+xml" href="{{ '/feed.xml' | url }}" />
+    {% include "analytics.html" %}
 </head>
 
-<body>
-    <main tabindex="-1" id="main-content">{% block content %}{% endblock %}</main>
+<body class="bg-brand-blue text-white font-sans antialiased selection:bg-brand-orange selection:text-white">
+    {% block content %}
+    {% endblock %}
+    {% include "footer.html" %}
 </body>
 
 </html>

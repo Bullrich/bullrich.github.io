@@ -2,13 +2,10 @@
 
 [![GitHub Pages deploy](https://github.com/Bullrich/bullrich.github.io/actions/workflows/deploy-site.yml/badge.svg?event=push)](https://github.com/Bullrich/bullrich.github.io/actions/workflows/deploy-site.yml)
 
-I took as a challenge to redesign my whole website using nothing else than Bootstrap 
-(for the grid system) and my own css skills.
+Personal portfolio website showcasing my work, blog posts, and professional experience. Built with [Eleventy](https://www.11ty.dev/) and styled with **Tailwind CSS V4** in a bold **neobrutalist** design with brand colors (blue `#0d1b2a` and orange `#f95738`).
 
-Created with [Eleventy](https://www.11ty.dev/)
+**Features**: Portfolio projects, blog, certifications, work history, and social links with QR code.
 
-### Design elements:
+### Design
 
-[Figma project](https://www.figma.com/file/higsulXOZesYi9BLQPTUUa/Portfolio)
-
-[Color palette](https://coolors.co/cad2c5-84a98c-52796f-354f52-2f3e46)
+Figma: [Portfolio Project](https://www.figma.com/file/higsulXOZesYi9BLQPTUUa/Portfolio)

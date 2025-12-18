@@ -1,30 +1,74 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-<!-- taken from https://bootstrap-menu.com/detail-smart-hide.html -->
-<nav class="navbar smart-scroll navbar-expand-lg navbar-dark odd-section">
-  <div class="container">
-    <a class="navbar-brand" href="{{ '/' | url }}">Javier Bullrich</a>
-  </div>
-</nav>
-<div class="portfolio">
-  <section class="long-section even-section" id="title">
-    <div class="vertical-center align-point">
-      <div class="container">
-        <h1 style="font-size: 64px">{{ title }}</h1>
-        <p>
-          {{ content | safe }}
-        </p>
-        {% for post in collections.blog %}
-        <h2><a href={{ post.url }}>{{ post.data.title }}</a></h2>
-        <h6 style="font-size: 14px">{{ post.date | w3DateFilter }}</h6>
-        <h6 style="font-size: 13px">{{ post.content | timeToRead ('150 words a minute') }} read</h6>
-        <p>{{ post.templateContent | excerpt }}</p>
-        {% endfor %}
+<div class="bg-brand-blue min-h-screen flex flex-col relative overflow-hidden">
+
+  {% include "layouts/navbar.html" %}
+
+  {% include "partials/vector-doodles.html" %}
+
+  <main class="container mx-auto max-w-6xl px-6 py-20 relative z-10 flex-grow">
+
+    {# Title Section #}
+    <div class="mb-16 text-center">
+      <h1 class="text-5xl md:text-7xl font-black text-brand-orange mb-4 tracking-tighter uppercase">
+        {{ title }}
+      </h1>
+      <div class="prose-project max-w-3xl mx-auto">
+        {{ content | safe }}
       </div>
     </div>
-  </section>
 
-  {% include "footer.html" %}
+    {# Blog Posts List #}
+    <div class="grid grid-cols-1 gap-8 md:gap-12">
+      {% for post in collections.blog %}
+      <div class="group relative transition-all duration-300 transform md:hover:-translate-y-2">
+        {# Card Shadow (Brutalism) #}
+        <div
+          class="absolute inset-0 bg-brand-orange rounded-2xl translate-x-2 translate-y-2 md:group-hover:translate-x-4 md:group-hover:translate-y-4 transition-transform duration-300">
+        </div>
+
+        {# Card Content #}
+        <a href="{{ post.url }}"
+          class="relative bg-gray-900 border-4 border-white rounded-2xl p-5 md:p-8 flex flex-col h-full block">
+
+          {# Title (On Top) #}
+          <h2
+            class="text-2xl md:text-3xl font-black text-brand-orange group-hover:text-white mb-4 uppercase tracking-wide transition-colors">
+            {{ post.data.title }}
+          </h2>
+
+          {# Mobile: Date & Time #}
+          <div class="md:hidden mb-4 flex gap-3 text-sm text-gray-400">
+            <span>{{ post.date | w3DateFilter }}</span>
+            <span>•</span>
+            <span>{{ post.content | timeToRead ('150 words a minute') }} read</span>
+          </div>
+
+          {# Desktop: Side Section + Preview #}
+          <div class="flex flex-col md:flex-row gap-4 md:gap-6">
+            {# Date Section (Small, on the side for desktop) #}
+            <div class="hidden md:flex flex-col gap-2 md:w-1/5 shrink-0 border-r-4 border-white/20 pr-4">
+              <span
+                class="inline-block bg-brand-blue text-white border border-white/30 font-bold px-3 py-1 rounded-full text-sm transform transition-transform w-max">
+                {{ post.date | w3DateFilter }}
+              </span>
+              <span class="text-gray-400 text-sm">
+                {{ post.content | timeToRead ('150 words a minute') }} read
+              </span>
+            </div>
+
+            {# Preview (Takes remaining space) #}
+            <div class="flex-1">
+              <p class="text-gray-300 text-base leading-relaxed">{{ post.templateContent | excerpt }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+  </main>
+
 </div>
 {% endblock %}
