@@ -9,7 +9,7 @@ I built a new desk! It handles both my work and my gaming, it is a standing desk
 
 I made a video showing the whole setup and how I assemblied over a lapse of two weeks.
 
-<a class="block md:hidden mx-auto w-fit bg-brand-orange hover:bg-brand-orange/80 text-white font-bold py-2 px-4 rounded-lg transition-colors no-underline" href="https://youtu.be/zRXrtkYV5A8" target="_blank"><button type="button" class="btn btn-danger">Watch on Youtube</button></a>
+<a class="block md:hidden mx-auto w-fit bg-brand-orange hover:bg-brand-orange/80 text-white font-bold py-2 px-4 rounded-lg transition-colors no-underline" href="https://youtu.be/zRXrtkYV5A8" target="_blank">Watch on Youtube</a>
 
 <div class="hidden md:block aspect-w-16 aspect-h-9 my-8 w-full">
 <iframe class="w-full h-[500px] rounded-xl border-2 border-white/20 shadow-lg" width="924" height="520" src="https://www.youtube.com/embed/zRXrtkYV5A8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
