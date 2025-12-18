@@ -88,3 +88,7 @@ Content is organized into collections defined in `.eleventy.js`. These collectio
 - `src/_includes/layouts/`: All page layouts using Tailwind CSS V4 and neobrutalist design.
 - `src/_includes/partials/vector-doodles.html`: Reusable SVG background decorations.
 - `src/css/tailwind.css`: Main Tailwind CSS configuration with custom `.prose-project` class.
+
+# Instructions when doing PRs
+
+If you modify any of the sites, you must add a screenshot of the changes to the PR.
