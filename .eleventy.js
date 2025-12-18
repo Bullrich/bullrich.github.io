@@ -47,7 +47,7 @@ module.exports = config => {
         fs.writeFileSync(tailwindOutputPath, result.css);
     });
 
-    config.addPassthroughCopy({ "./node_modules/fontawesome-free/webfonts": "css/webfonts" });
+
     config.addPassthroughCopy({ "./node_modules/jquery/dist/jquery.min.js": "js/jquery.min.js" });
 
     config.addPassthroughCopy('./src/img/');
