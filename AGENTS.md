@@ -1,6 +1,6 @@
 # Project Overview
 
-This project is a personal portfolio website built with **Eleventy (11ty)**, a static site generator. It relies on **Bootstrap** for styling and **Nunjucks** for templating, with **SCSS** support integrated via plugins.
+This project is a personal portfolio website built with **Eleventy (11ty)**, a static site generator. It uses **Tailwind CSS V4** for styling and **Nunjucks** for templating, with minimal **SCSS** support for legacy assets.
 
 ## Architecture & Structure
 
@@ -8,9 +8,10 @@ This project is a personal portfolio website built with **Eleventy (11ty)**, a s
 - **Static Site Generator**: [Eleventy](https://www.11ty.dev/)
 - **Templating Engine**: Nunjucks (`.njk`) is used for HTML, Markdown, and Data.
 - **Styling**:
-  - **Tailwind CSS V4**: Replaces Bootstrap for all styling. Configured with a `flat`, `neobrutalist` theme.
-  - **SCSS**: Custom styles are written in SCSS and processed by `eleventy-sass` (minimal usage now).
+  - **Tailwind CSS V4**: Primary styling framework with a custom `flat`, `neobrutalist` theme.
+  - **SCSS**: Minimal usage for FontAwesome integration only.
   - **FontAwesome**: Used for icons.
+  - **Typography Plugin**: `@tailwindcss/typography` for `.prose` and `.prose-project` classes.
 
 ### Design System
 - **Style**: Neobrutalist / "Goofy Flat".
@@ -19,23 +20,35 @@ This project is a personal portfolio website built with **Eleventy (11ty)**, a s
     - **Brand Orange**: `#f95738` (Accents, Highlights, Borders)
     - **White**: `#ffffff` (Text, Borders)
 - **Key Elements**:
-    - **Shapes**: Rounded "blob" corners, rotated cards, offset backgrounds.
-    - **Vector Art**: Simple SVG doodles (circles, squares, paths) in the background.
-    - **Interactions**: Hard shadows (`box-shadow`), slight rotations that straighten on hover, high-contrast hover states.
+    - **Shapes**: Rounded corners, offset backgrounds with hard shadows.
+    - **Vector Art**: Simple SVG doodles (circles, squares, paths) in the background (see `partials/vector-doodles.html`).
+    - **Interactions**: Hard shadows, hover effects (lift, color change), high-contrast hover states.
     - **Typography**: Bold, uppercase headers (Sans Serif).
 
 ### Directory Structure
 - **`src/`**: The source directory containing all content and templates.
   - **`_data/`**: Global data files.
   - **`_includes/`**: Reusable templates, including:
-    - `layouts/`: Page layouts (e.g., `index.html`, `base.html`).
-    - `partials/`: Reusable components (navbar, footer).
+    - `layouts/`: Page layouts (see Layouts section below).
+    - `partials/`: Reusable components (navbar, footer, vector-doodles).
   - **`blog/`, `portfolio/`, `employment/`, `links/`**: Content collections written in Markdown.
-  - **`css/`**: SCSS files and font assets.
+  - **`css/`**: Tailwind CSS (`tailwind.css`) and FontAwesome SCSS.
   - **`img/`**: Static images.
-  - **`scripts/`**: Client-side JavaScript.
 - **`dist/`**: The output directory where the built site is generated (Git ignored).
 - **`.eleventy.js`**: Main configuration file for Eleventy.
+
+## Layouts
+
+All layouts extend `base.html` and use the neobrutalist design system:
+
+- **`index.html`**: Homepage with hero, about, experience, latest blog post, and featured work sections.
+- **`project.html`**: Individual portfolio project pages with animated title and `.prose-project` content styling.
+- **`blog.html`**: Individual blog post pages with animated title and `.prose-project` content styling.
+- **`blog-list.html`**: Blog listing page with single-column card layout.
+- **`links.html`**: External links page with blog-list style layout.
+- **`certifications.html`**: Certifications page with certificate grid and badges.
+- **`social.html`**: Single-screen social links page with QR code (no navbar).
+- **`not-found.html`**: Animated 404 page with glitch effects and bouncing shapes.
 
 ## Data & Collections
 
@@ -62,13 +75,16 @@ Content is organized into collections defined in `.eleventy.js`. These collectio
   Sets `NODE_ENV=production` and runs `eleventy` to build the static site into `dist/`.
 
 ### Configuration Details
-- **Passthrough Copies**: Images, fonts, and scripts are copied directly to the output.
+- **Passthrough Copies**: Images and fonts are copied directly to the output.
 - **Plugins**:
-  - `eleventy-sass`: Compiles SCSS files.
-  - `@11ty/eleventy-plugin-syntaxhighlight`: Syntax highlighting for code blocks.
+  - `eleventy-sass`: Compiles SCSS files (FontAwesome only).
+  - `@11ty/eleventy-plugin-syntaxhighlight`: Syntax highlighting for code blocks using PrismJS.
   - `html-minifier`: Minifies HTML in production builds.
-  - `eleventy-plugin-time-to-read`: Estimates reading time for posts.
+  - `eleventy-plugin-time-to-read`: Estimates reading time for blog posts.
+  - `@tailwindcss/typography`: Provides `.prose` classes for markdown content.
 
 ## Key Files
 - `src/index.md`: The homepage content. It uses the `layouts/index.html` layout.
-- `src/_includes/layouts/`: Check here for understanding how pages are structured.
+- `src/_includes/layouts/`: All page layouts using Tailwind CSS V4 and neobrutalist design.
+- `src/_includes/partials/vector-doodles.html`: Reusable SVG background decorations.
+- `src/css/tailwind.css`: Main Tailwind CSS configuration with custom `.prose-project` class.
