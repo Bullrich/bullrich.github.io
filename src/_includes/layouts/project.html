@@ -1,7 +1,13 @@
 {% extends "layouts/base.html" %}
 
 {% if image %}
+{% if image.startsWith('http') %}
 {% set socialImage = image %}
+{% elif image.startsWith('/') %}
+{% set socialImage = site.url + image %}
+{% else %}
+{% set socialImage = site.url + '/img/portfolio/' + image %}
+{% endif %}
 {% endif %}
 
 {% block content %}

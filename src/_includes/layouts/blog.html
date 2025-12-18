@@ -1,5 +1,15 @@
 {% extends "layouts/base.html" %}
 
+{% if image %}
+{% if image.startsWith('http') %}
+{% set socialImage = image %}
+{% elif image.startsWith('/') %}
+{% set socialImage = site.url + image %}
+{% else %}
+{% set socialImage = site.url + '/img/posts/' + image %}
+{% endif %}
+{% endif %}
+
 {% block content %}
 <div class="bg-brand-blue min-h-screen flex flex-col relative overflow-hidden">
 

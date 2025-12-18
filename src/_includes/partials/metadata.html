@@ -26,8 +26,11 @@ them into the mix. #}
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ site.url }}" />
 
-{% if socialImage %}
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@{{ social.twitter }}" />
+<meta name="twitter:creator" content="@{{ social.twitter }}" />
+
+{% if socialImage %}
 <meta property="og:image" content="{{ socialImage }}" />
 <meta name="twitter:image" content="{{ socialImage }}" />
 <meta property="og:image:alt" content="Page image for {{ pageTitle }}" />
