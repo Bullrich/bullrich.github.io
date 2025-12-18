@@ -1,7 +1,7 @@
 ---
 layout: "layouts/blog.html"
-title:  "Learning Scala"
-date:   2017-05-03
+title: "Learning Scala"
+date: 2017-05-03
 categories: blog
 tag: scala
 ---
@@ -43,7 +43,7 @@ public static string AddATwoToAString(string givenString) {
 
 This is a generic method in C#. To call this method we should do something like: `AddATwoToAString(ExampleString);`
 
- Now let's write it in Scala.
+Now let's write it in Scala.
 
 ```scala
 def AddATwoToAString(givenString: String): String ={

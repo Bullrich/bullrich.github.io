@@ -6,6 +6,7 @@ category: unity
 technology: Unity
 description: Gamification of the Multitier architecture
 ---
+
 This game is a literal representation of [Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture), a type of client–server architecture.
 
 <img src="../../img/portfolio/multitierBig.gif"/>

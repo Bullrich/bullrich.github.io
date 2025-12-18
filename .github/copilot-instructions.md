@@ -5,15 +5,17 @@ This project is a personal portfolio website built with **Eleventy (11ty)**, a s
 ## Architecture & Structure
 
 ### Core Components
+
 - **Static Site Generator**: [Eleventy](https://www.11ty.dev/)
 - **Templating Engine**: Nunjucks (`.njk`) is used for HTML, Markdown, and Data.
 - **Styling**:
-  - **Tailwind CSS V4**: Primary styling framework with a custom `flat`, `neobrutalist` theme.
-  - **SCSS**: Minimal usage for FontAwesome integration only.
-  - **FontAwesome**: Used for icons.
-  - **Typography Plugin**: `@tailwindcss/typography` for `.prose` and `.prose-project` classes.
+    - **Tailwind CSS V4**: Primary styling framework with a custom `flat`, `neobrutalist` theme.
+    - **SCSS**: Minimal usage for FontAwesome integration only.
+    - **FontAwesome**: Used for icons.
+    - **Typography Plugin**: `@tailwindcss/typography` for `.prose` and `.prose-project` classes.
 
 ### Design System
+
 - **Style**: Neobrutalist / "Goofy Flat".
 - **Colors**:
     - **Brand Blue**: `#0d1b2a` (Backgrounds, Text)
@@ -26,14 +28,15 @@ This project is a personal portfolio website built with **Eleventy (11ty)**, a s
     - **Typography**: Bold, uppercase headers (Sans Serif).
 
 ### Directory Structure
+
 - **`src/`**: The source directory containing all content and templates.
-  - **`_data/`**: Global data files.
-  - **`_includes/`**: Reusable templates, including:
-    - `layouts/`: Page layouts (see Layouts section below).
-    - `partials/`: Reusable components (navbar, footer, vector-doodles).
-  - **`blog/`, `portfolio/`, `employment/`, `links/`**: Content collections written in Markdown.
-  - **`css/`**: Tailwind CSS (`tailwind.css`) and FontAwesome SCSS.
-  - **`img/`**: Static images.
+    - **`_data/`**: Global data files.
+    - **`_includes/`**: Reusable templates, including:
+        - `layouts/`: Page layouts (see Layouts section below).
+        - `partials/`: Reusable components (navbar, footer, vector-doodles).
+    - **`blog/`, `portfolio/`, `employment/`, `links/`**: Content collections written in Markdown.
+    - **`css/`**: Tailwind CSS (`tailwind.css`) and FontAwesome SCSS.
+    - **`img/`**: Static images.
 - **`dist/`**: The output directory where the built site is generated (Git ignored).
 - **`.eleventy.js`**: Main configuration file for Eleventy.
 
@@ -53,6 +56,7 @@ All layouts extend `base.html` and use the neobrutalist design system:
 ## Data & Collections
 
 Content is organized into collections defined in `.eleventy.js`. These collections pick up Markdown files from specific directories:
+
 - **Employment**: `src/employment/*.md` (Reversed order)
 - **Portfolio**: `src/portfolio/*.md` (Reversed order)
 - **Featured**: Subset of Portfolio where `featured: true`
@@ -62,32 +66,45 @@ Content is organized into collections defined in `.eleventy.js`. These collectio
 ## Development Workflow
 
 ### Commands
+
 - **Start Development Server**:
-  ```bash
-  npm start
-  ```
-  Runs `eleventy --serve --quiet`. Starts a local server with hot reloading.
+
+    ```bash
+    npm start
+    ```
+
+    Runs `eleventy --serve --quiet`. Starts a local server with hot reloading.
 
 - **Build for Production**:
-  ```bash
-  npm run build
-  ```
-  Sets `NODE_ENV=production` and runs `eleventy` to build the static site into `dist/`.
+    ```bash
+    npm run build
+    ```
+    Sets `NODE_ENV=production` and runs `eleventy` to build the static site into `dist/`.
 
 ### Configuration Details
+
 - **Passthrough Copies**: Images and fonts are copied directly to the output.
 - **Plugins**:
-  - `eleventy-sass`: Compiles SCSS files (FontAwesome only).
-  - `@11ty/eleventy-plugin-syntaxhighlight`: Syntax highlighting for code blocks using PrismJS.
-  - `html-minifier`: Minifies HTML in production builds.
-  - `eleventy-plugin-time-to-read`: Estimates reading time for blog posts.
-  - `@tailwindcss/typography`: Provides `.prose` classes for markdown content.
+    - `eleventy-sass`: Compiles SCSS files (FontAwesome only).
+    - `@11ty/eleventy-plugin-syntaxhighlight`: Syntax highlighting for code blocks using PrismJS.
+    - `html-minifier`: Minifies HTML in production builds.
+    - `eleventy-plugin-time-to-read`: Estimates reading time for blog posts.
+    - `@tailwindcss/typography`: Provides `.prose` classes for markdown content.
 
 ## Key Files
+
 - `src/index.md`: The homepage content. It uses the `layouts/index.html` layout.
 - `src/_includes/layouts/`: All page layouts using Tailwind CSS V4 and neobrutalist design.
 - `src/_includes/partials/vector-doodles.html`: Reusable SVG background decorations.
 - `src/css/tailwind.css`: Main Tailwind CSS configuration with custom `.prose-project` class.
+
+## Code Quality
+
+### Linting and Formatting
+
+- **Prettier**: Used for code formatting with 4 spaces indentation.
+- **Before submitting changes**: Always run `npm run lint` and `npm run build` to ensure code quality and that the site builds correctly.
+- **Formatting**: Run `npm run format` to automatically format code according to the project's style guide.
 
 # Instructions when doing PRs
 

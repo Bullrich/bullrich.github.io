@@ -3,11 +3,11 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-    --color-brand-blue: #15202B;
-    --color-brand-orange: #F26522;
-    --color-brand-purple: #6C63FF;
-    --color-brand-green: #00B87C;
-    --font-sans: 'Inter', sans-serif;
+    --color-brand-blue: #15202b;
+    --color-brand-orange: #f26522;
+    --color-brand-purple: #6c63ff;
+    --color-brand-green: #00b87c;
+    --font-sans: "Inter", sans-serif;
 }
 
 /* Custom base styles mapping to our theme */

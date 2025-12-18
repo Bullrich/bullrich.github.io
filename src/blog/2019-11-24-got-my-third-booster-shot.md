@@ -1,7 +1,7 @@
 ---
 layout: "layouts/blog.html"
-title:  "Took my third covid shot"
-date:   2021-11-24
+title: "Took my third covid shot"
+date: 2021-11-24
 categories: blog
 ---
 
@@ -13,9 +13,9 @@ And probably other countries will request it soon, so it's better to get it now.
 
 Now, Berlin has been quite packed. I went earlish in the morning to the Tegel Vaccination Center but got lost. I usually use the app called [Transit](https://transitapp.com/), which, in my opinion, is one of the best apps for public transport navigation. But in this particular case it failed and made me take a different route that didn‘t make sense. At the end I lost 30 minutes coming back and taking a different route.
 
-Once I arrived I had to do a line outside with the people without appointments (it seems that appointments are super hard to get so I opted in for the wait). Now, a funny thing of Berlin: The weather is *always* ugly and of course it was raining. Someone from security was handing plastic ponchos which became a blessing.
+Once I arrived I had to do a line outside with the people without appointments (it seems that appointments are super hard to get so I opted in for the wait). Now, a funny thing of Berlin: The weather is _always_ ugly and of course it was raining. Someone from security was handing plastic ponchos which became a blessing.
 
-On total we waited for 2 hours and 20 minutes just to get inside the building (which, lucky for me, was the exact duration of *The Hobbit, Battle of Five Armies* so I wasn‘t that bored during the line.
+On total we waited for 2 hours and 20 minutes just to get inside the building (which, lucky for me, was the exact duration of _The Hobbit, Battle of Five Armies_ so I wasn‘t that bored during the line.
 
 Once inside the process was quite quick, in less than 15 minutes my data was collected and I got vaccinated and ready to go.
 

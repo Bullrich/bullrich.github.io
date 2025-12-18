@@ -4,6 +4,7 @@ title: "Svelte with Tailwind and Daisy UI"
 date: 2022-10-19
 categories: blog
 ---
+
 In this guide, we will see how to create a Svelte project with [TailwindCSS](https://tailwindcss.com/) and [Daisy UI](https://daisyui.com/) installed.
 
 It is quite straightforward but requires you to copy and replace several files.
@@ -26,21 +27,21 @@ module.exports = {
         tailwindcss: {},
         autoprefixer: {},
     },
-}
+};
 ```
 
 Replace `svelte.config.js` with the following configuration:
 
 ```jsx
-import preprocess from 'svelte-preprocess'
+import preprocess from "svelte-preprocess";
 
 export default {
-  preprocess: [
-    preprocess({
-      postcss: true,
-    }),
-  ],
-}
+    preprocess: [
+        preprocess({
+            postcss: true,
+        }),
+    ],
+};
 ```
 
 Create `tailwind.config.cjs` with the following configuration:
@@ -48,12 +49,12 @@ Create `tailwind.config.cjs` with the following configuration:
 ```jsx
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./src/**/*.{js,svelte,ts}', './index.html'],
+    content: ["./src/**/*.{js,svelte,ts}", "./index.html"],
     theme: {
         extend: {},
     },
-    plugins: [require('daisyui')],
-}
+    plugins: [require("daisyui")],
+};
 ```
 
 ## Add the CSS imports

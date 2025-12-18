@@ -1,7 +1,7 @@
 ---
 layout: "layouts/blog.html"
-title:  "I am a lazy developer"
-date:   2022-01-21
+title: "I am a lazy developer"
+date: 2022-01-21
 categories: blog
 ---
 
@@ -16,7 +16,7 @@ The copyright text you see at the footer:
 Is actually just a ~~Jekyll~~ Eleventy component that updates itself automatically when I update this website:
 
 ```html
-<li> Copyright © { site.date | dateFilter } </li>
+<li>Copyright © { site.date | dateFilter }</li>
 ```
 
 In my old portfolio I even updated my age with a script that counted how many years passed from my birthday.
@@ -24,26 +24,25 @@ In my old portfolio I even updated my age with a script that counted how many ye
 ## Quoting Bill Gates because it makes me feel intelligent
 
 > I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.
-> 
 
 We all know this quote, it’s famous, it makes us feel good of being lazy, it makes us feel like we are in the correct path and that we don’t need to change. In other words, it makes us feel **comfortable**.
 
-But there are a lot of ways of interpreting this quote, or, being more specific, there are several way to interpret the word *lazy*.
+But there are a lot of ways of interpreting this quote, or, being more specific, there are several way to interpret the word _lazy_.
 
-He clearly didn’t refer to the standard definition of *lazy*, he doesn’t want to hire people who don’t want to work.
+He clearly didn’t refer to the standard definition of _lazy_, he doesn’t want to hire people who don’t want to work.
 
-I believe that, by *lazy*, he refers to people who loathes doing tasks but likes doing work.
+I believe that, by _lazy_, he refers to people who loathes doing tasks but likes doing work.
 
 ## Lazy developers loathes tasks
 
-Lazy developers hate doing tasks, and by tasks I mean monotonous or small tasks that take a bit of our time but are always present. 
+Lazy developers hate doing tasks, and by tasks I mean monotonous or small tasks that take a bit of our time but are always present.
 Things like manually updating packages, having to log into a dashboard to start a process, complying with linters, even [waiting for the coffee to be ready](https://github.com/NARKOZ/hacker-scripts) counts as a monotonous task.
 
 They don’t like following a script in their routine.
 
 They want to do interesting work, things that make them think. They try to remove as much tasks from their work as possible.
 
-So instead of simple *doing* those repetitive tasks, they figure out a way to automate it and remove it from their routine.
+So instead of simple _doing_ those repetitive tasks, they figure out a way to automate it and remove it from their routine.
 
 They end up doing a big effort to not do a lot of small efforts, and when this works successfully they perform a better and more efficient job.
 
@@ -65,10 +64,10 @@ Though CI fascination and a hate for monotony I have slowly become quite an expe
 
 I consider myself an expert in GitHub actions, I [have](https://github.com/Bullrich/Prace.js) [developed](https://github.com/Bullrich/commit-autotag) [several](https://github.com/Bullrich/update-node-scoped-dependencies) actions myself, while I also have been learning how to use preexisting actions.
 
-I created [Unity PR Bot](https://unityprbot.com/), a GitHub bot that *automates* the execution of Unity Tests in Pull Requests using Unity Cloud (it basically creates a Continuous Testing system using your Unity Cloud instance).
+I created [Unity PR Bot](https://unityprbot.com/), a GitHub bot that _automates_ the execution of Unity Tests in Pull Requests using Unity Cloud (it basically creates a Continuous Testing system using your Unity Cloud instance).
 
-I have also *automated* the repository, Unity PR Bot repository flow is 90% automated through GitHub actions. 
-When creating a Pull Request, actions execute tests and lints the Pull Request itself. 
+I have also _automated_ the repository, Unity PR Bot repository flow is 90% automated through GitHub actions.
+When creating a Pull Request, actions execute tests and lints the Pull Request itself.
 When the Pull Request is merged, it automatically deploys it to staging and it also checks if there has been a version upgrade, where it tags that commit and creates a GitHub release with a changelog of all the changes between the previous tag and this tag and then it builds the project and pushes it to production.
 
 ![automation-flow.png](../../img/posts/automation-flow.png)

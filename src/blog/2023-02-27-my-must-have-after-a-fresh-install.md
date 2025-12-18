@@ -5,7 +5,7 @@ date: 2023-02-27
 categories: blog
 ---
 
-Every time I get a new macbook I install the same programs. These are my installation instructions. 
+Every time I get a new macbook I install the same programs. These are my installation instructions.
 I wrote this mainly for my use, but could be useful for anyone else.
 
 # Install [Homebrew](https://brew.sh/)
@@ -21,6 +21,7 @@ This are the packages that I first need to configure
 ## Enable VIM syntax highlighting
 
 It just makes reading files easier. Create the file `~/.vimrc` with the following:
+
 ```vim
 syntax on
 ```
@@ -28,6 +29,7 @@ syntax on
 ## Add Git alias
 
 I use these git scripts to simplify my work flow
+
 ```ini
 [alias]
         tree = log --graph --all --decorate --pretty=oneline --abbrev-commit

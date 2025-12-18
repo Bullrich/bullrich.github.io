@@ -18,6 +18,7 @@ I made a video showing the whole setup and how I assemblied over a lapse of two 
 I wanna bring up the fact that the monitor shelf cost me less than 25€, which, compared to Grovemade and other brands that charge around 150€ (**and more**), I got it quite cheap!
 
 Here are all the items I mentioned in the video:
+
 - [Standing desk legs](https://www.ergotopia.de/)
 - [Ikea Tabletop](https://www.ikea.com/de/de/p/lagkapten-tischplatte-weiss-las-eichenachbildung-60508232)
 - [Under desk storage rack](https://geni.us/cable-duc)
