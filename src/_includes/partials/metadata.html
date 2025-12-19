@@ -2,13 +2,7 @@
 the home page. #} {% if site.name === title %} {% set pageTitle = title %} {% endif %} {% set
 siteTitle = site.name %} {# If the page's Front Matter has specific metaTitle and/or metaDesc items,
 switch them into the mix. #} {% if metaTitle %} {% set pageTitle = metaTitle %} {% endif %} {% if
-not metaDesc %} {% set metaDesc = summary %} {% endif %} {# Determine OG image URL - only for pages
-in ogPages collection #} {% set ogImageUrl = '' %} {% if page.inputPath == './src/index.md' %} {%
-set ogImageUrl = site.url + '/og/index.html' %} {% elif page.inputPath.startsWith('./src/blog/') %}
-{% set ogImageUrl = site.url + '/og/' + page.fileSlug + '.html' %} {% elif
-page.inputPath.startsWith('./src/portfolio/') %} {% set ogImageUrl = site.url + '/og/' +
-page.fileSlug + '.html' %} {% elif page.inputPath.startsWith('./src/employment/') %} {% set
-ogImageUrl = site.url + '/og/' + page.fileSlug + '.html' %} {% endif %}
+not metaDesc %} {% set metaDesc = summary %} {% endif %}
 
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ site.url + page.url }}" />
@@ -22,14 +16,16 @@ ogImageUrl = site.url + '/og/' + page.fileSlug + '.html' %} {% endif %}
 <meta name="twitter:site" content="@{{ social.twitter }}" />
 <meta name="twitter:creator" content="@{{ social.twitter }}" />
 
-{% if ogImageUrl %}
-<meta property="og:image" content="{{ ogImageUrl }}" />
-<meta name="twitter:image" content="{{ ogImageUrl }}" />
+{# Generate OG image for relevant pages #} {% if page.inputPath == './src/index.md' %} {% ogImage
+"src/_includes/partials/opengraph.html", { title: pageTitle, isHomepage: true } %} {% elif
+page.inputPath.startsWith('./src/blog/') or page.inputPath.startsWith('./src/portfolio/') or
+page.inputPath.startsWith('./src/employment/') or page.inputPath == './src/not-found.md' %} {%
+ogImage "src/_includes/partials/opengraph.html", { title: title, isHomepage: false } %} {% endif %}
 <meta property="og:image:alt" content="Page image for {{ pageTitle }}" />
 <meta name="twitter:image:alt" content="Page image for {{ pageTitle }}" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-{% endif %} {% if metaDesc %}
+{% if metaDesc %}
 <meta name="description" content="{{ metaDesc }}" />
 <meta name="twitter:description" content="{{ metaDesc }}" />
 <meta property="og:description" content="{{ metaDesc }}" />
