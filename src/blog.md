@@ -1,8 +1,9 @@
 ---
 layout: "layouts/blog-list.html"
-title:  "Blog"
+title: "Blog"
 description: Blog | Javier Bullrich.
 ---
+
 Hello! I'm Javier.
 
 A Software Developer, writer and gamer.

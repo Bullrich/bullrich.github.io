@@ -1,7 +1,7 @@
 ---
 layout: "layouts/blog.html"
-title:  "New Website!"
-date:   2017-02-09
+title: "New Website!"
+date: 2017-02-09
 categories:
     - blog
 tags:
@@ -20,9 +20,6 @@ With Jekyll I can modify any site and transform it at will, changing even the sm
 
 I got so fond of it that I remade my whole site, with it’s 3 blogs and my portfolio, all in 4 different Jekyll powered sites.
 
-  
-
 By the way, I hated my old portfolio, I had to modify a bunch of lines, divs, articles and stuff for every new item I added. Now I only have to write a Markdown file and Ta-da! It’s already added.
 
-  
 Another thing I forgot, github pages. My free Hostinger site could receive very little visits per hour, so if an article of mine got a little popular the site would be down before 50 people could read it. This isn’t a problem with github pages, having a static site cost little to nothing to the server, who must only forward the html and it’s sub directories, making it really low cost of processing power.

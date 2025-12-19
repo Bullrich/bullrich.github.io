@@ -1,12 +1,13 @@
 ---
 layout: "layouts/blog.html"
-title:  "Today I Took and Passed the Unity Certified Developer Exam"
-date:   2016-09-30
-categories: 
+title: "Today I Took and Passed the Unity Certified Developer Exam"
+date: 2016-09-30
+categories:
     - blog
 tags:
     - unity
 ---
+
 Today, in Argentina, I was one of the first Argentinians who could take the Unity Certified Developer Exam.
 
 I was literally the second one to finish it, today were two exams, one at 1 pm, and the other at 3 pm. I was at the 1 pm one, and finish it second because some complications that I will address in a moment.
@@ -55,13 +56,9 @@ Services: A easy one. I know that most failed this one because they have never u
 
 Last but not least: User Interface. Explain which type should a method be to be called from a button function (public), identify the pivot of an object, in what format should I import an Image to use it in the screen, and something else I don’t remember. Also, passed.
 
- 
-
 So then, by the end, I got a 82(I think that it was 1660 points of 2000). I was second completing the exam (damn Game Design section that freezed my site). It was really really easy and EVERYTHING that they’ll ask you can be find on the [Exam Objectives pdf](https://certification.unity.com/themes/certification/docs/unity-certified-developer-exam-objectives.pdf) (I literally have this opened and copy some of the “Certification Objectives” for telling you some question). I recommend checking the docs before going to the exam but good luck.
 
 For people that say that the certification is useless, I recommend reading [this](https://www.reddit.com/r/Unity3D/comments/4fp2x3/last_weekend_i_took_and_passed_the_unity/d2b12hw) answer in a reddit post. That is the Exam's main objective. Also, it’s valid for only two years, so you have to squish all you can from it in that time.
-
- 
 
 At the end, they took us a picture with James and uploaded to the UAI’s facebook page or whatever. I spoke to the career director, who tried to convince me to study there, but I’m from the competition (Escuela Da Vinci) so I rejected the kind offer, but we exchanged email addresses ’cause he told me he wanted to make a project and that he could use my help. I also tried to dissuade him to teach Unreal instead on focusing only in Unity, like I’ve been insisting in the career director of my career for a year and a half, and finally was able to start a Unreal Lab so that the teachers can learn it and teach it to the students. Now I have to insist with CryEngine for another year and a half.
 
@@ -69,9 +66,8 @@ So you all know how this goes. If everything fails, we’ll always have GameMake
 
 Thanks for reading all this, I know it’s long. Kudos to you!
 
- 
-
-* * *
+---
 
 ### Extra
+
 ¹Carl Callewaert is Unity’s Lead Evangelist. He is like Jesus but with Unity. He travels the world preaching and teaching about Unity, you should follow him on [Twitter](https://twitter.com/carlunity), he literally tweets from a different country each week.

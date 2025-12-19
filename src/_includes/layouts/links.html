@@ -1,71 +1,71 @@
-{% extends "layouts/base.html" %}
-
-{% block content %}
+{% extends "layouts/base.html" %} {% block content %}
 <div class="bg-brand-blue min-h-screen flex flex-col relative overflow-hidden">
+    {% include "layouts/navbar.html" %} {% include "partials/vector-doodles.html" %}
 
-  {% include "layouts/navbar.html" %}
-
-  {% include "partials/vector-doodles.html" %}
-
-  <main class="container mx-auto max-w-6xl px-6 py-20 relative z-10 flex-grow">
-
-    {# Title Section #}
-    <div class="mb-16 text-center">
-      <h1 class="text-5xl md:text-7xl font-black text-brand-orange mb-4 tracking-tighter uppercase">
-        {{ title }}
-      </h1>
-      <div class="prose-project max-w-3xl mx-auto">
-        {{ content | safe }}
-      </div>
-    </div>
-
-    {# Links List - Similar to blog-list style #}
-    <div class="grid grid-cols-1 gap-8 md:gap-12">
-      {% for post in collections.links %}
-      <div class="group relative transition-all duration-300 transform md:hover:-translate-y-2">
-        {# Card Shadow (Brutalism) #}
-        <div
-          class="absolute inset-0 bg-brand-orange rounded-2xl translate-x-2 translate-y-2 md:group-hover:translate-x-4 md:group-hover:translate-y-4 transition-transform duration-300">
+    <main class="container mx-auto max-w-6xl px-6 py-20 relative z-10 flex-grow">
+        {# Title Section #}
+        <div class="mb-16 text-center">
+            <h1
+                class="text-5xl md:text-7xl font-black text-brand-orange mb-4 tracking-tighter uppercase"
+            >
+                {{ title }}
+            </h1>
+            <div class="prose-project max-w-3xl mx-auto">{{ content | safe }}</div>
         </div>
 
-        {# Card Content #}
-        <a href="{{ post.data.url }}" target="_blank"
-          class="relative bg-gray-900 border-4 border-white rounded-2xl p-5 md:p-8 flex flex-col h-full block">
+        {# Links List - Similar to blog-list style #}
+        <div class="grid grid-cols-1 gap-8 md:gap-12">
+            {% for post in collections.links %}
+            <div
+                class="group relative transition-all duration-300 transform md:hover:-translate-y-2"
+            >
+                {# Card Shadow (Brutalism) #}
+                <div
+                    class="absolute inset-0 bg-brand-orange rounded-2xl translate-x-2 translate-y-2 md:group-hover:translate-x-4 md:group-hover:translate-y-4 transition-transform duration-300"
+                ></div>
 
-          {# Title (On Top) #}
-          <h2
-            class="text-2xl md:text-3xl font-black text-brand-orange group-hover:text-white mb-4 uppercase tracking-wide transition-colors">
-            {{ post.data.title }}
-          </h2>
+                {# Card Content #}
+                <a
+                    href="{{ post.data.url }}"
+                    target="_blank"
+                    class="relative bg-gray-900 border-4 border-white rounded-2xl p-5 md:p-8 flex flex-col h-full block"
+                >
+                    {# Title (On Top) #}
+                    <h2
+                        class="text-2xl md:text-3xl font-black text-brand-orange group-hover:text-white mb-4 uppercase tracking-wide transition-colors"
+                    >
+                        {{ post.data.title }}
+                    </h2>
 
-          {# Mobile: Date #}
-          <div class="md:hidden mb-4 text-sm text-gray-400">
-            <span>{{ post.date | w3DateFilter }}</span>
-          </div>
+                    {# Mobile: Date #}
+                    <div class="md:hidden mb-4 text-sm text-gray-400">
+                        <span>{{ post.date | w3DateFilter }}</span>
+                    </div>
 
-          {# Desktop: Side Section + Content #}
-          <div class="flex flex-col md:flex-row gap-4 md:gap-6">
-            {# Date Section (Small, on the side for desktop) #}
-            <div class="hidden md:flex flex-col gap-2 md:w-1/5 shrink-0 border-r-4 border-white/20 pr-4">
-              <span
-                class="inline-block bg-brand-blue text-white border border-white/30 font-bold px-3 py-1 rounded-full text-sm transform transition-transform w-max">
-                {{ post.date | w3DateFilter }}
-              </span>
+                    {# Desktop: Side Section + Content #}
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6">
+                        {# Date Section (Small, on the side for desktop) #}
+                        <div
+                            class="hidden md:flex flex-col gap-2 md:w-1/5 shrink-0 border-r-4 border-white/20 pr-4"
+                        >
+                            <span
+                                class="inline-block bg-brand-blue text-white border border-white/30 font-bold px-3 py-1 rounded-full text-sm transform transition-transform w-max"
+                            >
+                                {{ post.date | w3DateFilter }}
+                            </span>
+                        </div>
+
+                        {# Content (Takes remaining space) #}
+                        <div class="flex-1">
+                            <div class="prose prose-invert text-base leading-relaxed max-w-none">
+                                {{ post.content | safe }}
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-
-            {# Content (Takes remaining space) #}
-            <div class="flex-1">
-              <div class="prose prose-invert text-base leading-relaxed max-w-none">
-                {{ post.content | safe }}
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      {% endfor %}
-    </div>
-
-  </main>
-
+            {% endfor %}
+        </div>
+    </main>
 </div>
 {% endblock %}

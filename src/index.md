@@ -4,22 +4,22 @@ title: "Javier Bullrich"
 description: Software developer with a great focus on automation, front end and developer’s experience.
 image: img/vr_coffee.jpg
 user:
-  image: img/vr_coffee.jpg
-  name: Javier Bullrich
-  address: Berlin, Germany
-  codersrank: bullrich
-  email: javier@bullrich.dev
-  github: Bullrich
-  linkedin: javibullrich/?locale=en_US
+    image: img/vr_coffee.jpg
+    name: Javier Bullrich
+    address: Berlin, Germany
+    codersrank: bullrich
+    email: javier@bullrich.dev
+    github: Bullrich
+    linkedin: javibullrich/?locale=en_US
 technologies:
-  - Open AI
-  - Ethereum
-  - Solidity
-  - Docker
-  - SvelteKit
-  - Flutter
-  - Typescript
-  - Rust
+    - Open AI
+    - Ethereum
+    - Solidity
+    - Docker
+    - SvelteKit
+    - Flutter
+    - Typescript
+    - Rust
 ---
 
 <p>I’m Javier, software developer with a strong focus on developer experience and front end development.</p>

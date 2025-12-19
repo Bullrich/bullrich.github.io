@@ -1,9 +1,10 @@
 ---
 layout: "layouts/blog.html"
-title:  "Health.Wealth Hackathon technical analysis"
-date:   2022-04-25
+title: "Health.Wealth Hackathon technical analysis"
+date: 2022-04-25
 categories: blog
 ---
+
 The Health.Wealth app was my team’s submission for the Amsterdam EthGlobal Hackathon. It **won 1st price in Best Overall Project Built with Tatum.io** and **two honorable mentions** by **Wallet Connect** and **Optimism Network**. This post analyzes how the dApp works and how it was built.
 
 You can find the hackathon entry with its code [here](../../portfolio/health.wealth).
@@ -42,7 +43,7 @@ Let’s look into the flow to understand how it works:
 
 A user needs to sign into the app using their web3 wallet and their biometric sensor (Oura Ring, FitBit, Muse BCI, Apple Watch, etc.). For the PoC we only supported Oura’s API and we used Wallet Connect to handle authentication.
 
-After this they decide to set a goal, for example: *Meditate for 10 minutes, 4 times per week for a duration of 4 weeks*.
+After this they decide to set a goal, for example: _Meditate for 10 minutes, 4 times per week for a duration of 4 weeks_.
 
 Then, finally, they stake a given amount of DAI (between 10 and a 100) and these funds get locked for the duration of 4 weeks.
 
@@ -60,7 +61,7 @@ Here is where the magic happens:
     - They receive the staked DAI.
     - The rewards are moved into a community pool that supports public goods and powers the gas for the contracts.
 
-For the users that achieve their objective, they not only earned rewards from their staking, but they also now own a token with their data that they can profit from. 
+For the users that achieve their objective, they not only earned rewards from their staking, but they also now own a token with their data that they can profit from.
 
 They can permission this data to scientists, or to third party researches. They can also burn it if they wish and the key would be lost, or they can just store it as an achievement of what they accomplished. It’s their data so they are free to use it however they wish to do so.
 
@@ -70,11 +71,11 @@ We never store the user’s biometric data, as soon as we mint the NFT all the d
 
 ![stack.jpg](../../img/posts/health_wealth/stack.jpg)
 
-The dApp is a mix of Web2 and Web3. 
+The dApp is a mix of Web2 and Web3.
 
 We used Firebase for hosting our website, database and lambda functions.
 
-The whole front end of the app is built using 
+The whole front end of the app is built using
 
 - React framework with Typescript
 - Oura’s OAuth API to fetch an access token
@@ -85,13 +86,13 @@ The front end itself is quite minimal but gives us all the important information
 
 When the user’s deadline arrives, a cron job, which is a Firebase function, will fetch the user’s biometric data and verify that the goals were meet. Based on the result, the system will execute a function in the smart contract using `Tatum` as the provider.
 
-The system will also encrypt this data and, using `Tatum` again, it will upload the given data into the `IPFS`. 
+The system will also encrypt this data and, using `Tatum` again, it will upload the given data into the `IPFS`.
 
 For the Web3 side, we used a mix of Ethereum and `Optimism`.
 
 We wanted to host everything in `Optimism` as it’s faster, but the other providers didn’t support it.
 
-One hurdle we faces was that our yielding provider, which is `[Yearn.Finance](http://Yearn.Finance)` and `Tatum` don’t currently support Optimism. 
+One hurdle we faces was that our yielding provider, which is `[Yearn.Finance](http://Yearn.Finance)` and `Tatum` don’t currently support Optimism.
 
 The `ERC721` modified contract was deployed into the `Optimism` Kovan network, and we used `ethers.js` to call the function to mint a new NFT.
 
@@ -99,9 +100,9 @@ As `Optimism` is an `Ethereum L2 chain`, the user will have the same wallet addr
 
 ## The staking contract
 
-The smart contract which handles the staking is a simple contract which implements a `struct`, called *UserGoals*, which contains the important data, and a `map` which uses the user address as the key.
+The smart contract which handles the staking is a simple contract which implements a `struct`, called _UserGoals_, which contains the important data, and a `map` which uses the user address as the key.
 
-The *UserGoals* struct contains three fields, the unix time for the deadline of the user goals, the amount of DAI they staked and, finally, the shares that their stake was worth.
+The _UserGoals_ struct contains three fields, the unix time for the deadline of the user goals, the amount of DAI they staked and, finally, the shares that their stake was worth.
 
 ```solidity
 struct UserGoals {
@@ -153,10 +154,10 @@ address DAI = 0x51998830821827e12044a903e524b163152eFFd4;
 Vault yDai = Vault(0xF4869878d11145D65136A7e3c8CA36a5A5059dFa);
 
 function stake(uint256 deadline, uint256 amount) public {
-		dai.transferFrom(msg.sender, address(this), amount);		
+		dai.transferFrom(msg.sender, address(this), amount);
 		dai.approve(address(yDai), MAX_INT);
 		uint256 deposited = yDai.deposit(amount);
-		
+
 		userGoals[msg.sender] = UserGoals(deadline, amount, deposited);
 }
 ```

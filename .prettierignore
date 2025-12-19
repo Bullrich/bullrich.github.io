@@ -1,0 +1,15 @@
+# Build outputs
+dist/
+node_modules/
+
+# Lock files
+package-lock.json
+
+# Git
+.git/
+
+# Logs
+*.log
+
+# Cache
+.cache/

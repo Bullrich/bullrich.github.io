@@ -1,14 +1,18 @@
-<nav class="relative md:sticky md:top-0 z-50 bg-brand-blue/95 backdrop-blur-sm border-b border-brand-orange/20 shadow-lg"
-    id="navbar">
+<nav
+    class="relative md:sticky md:top-0 z-50 bg-brand-blue/95 backdrop-blur-sm border-b border-brand-orange/20 shadow-lg"
+    id="navbar"
+>
     <div class="container mx-auto max-w-6xl px-6 py-4">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-            {# Mobile Header with Brand and Toggle (Toggle hidden for now as we just stack on mobile) #}
-            {# Actually, for mobile "vertical and not move at all" implies a static list below hero? or just standard
-            static navbar? #}
-            {# User: "On mobile it should just show the same options but vertical and not move at all." #}
-            {# This likely means simplified display. I'll make a simple list for mobile, flex row for desktop. #}
+            {# Mobile Header with Brand and Toggle (Toggle hidden for now as we just stack on
+            mobile) #} {# Actually, for mobile "vertical and not move at all" implies a static list
+            below hero? or just standard static navbar? #} {# User: "On mobile it should just show
+            the same options but vertical and not move at all." #} {# This likely means simplified
+            display. I'll make a simple list for mobile, flex row for desktop. #}
 
-            <div class="text-2xl font-bold text-brand-orange uppercase tracking-tight text-center md:text-left">
+            <div
+                class="text-2xl font-bold text-brand-orange uppercase tracking-tight text-center md:text-left"
+            >
                 <a href="{{ '/' | url }}#top" class="block md:inline-block">
                     <span class="md:hidden">Bullrich</span>
                     <span class="hidden md:inline">Javier Bullrich</span>
@@ -16,32 +20,75 @@
             </div>
 
             <ul
-                class="flex flex-col md:flex-row gap-4 md:gap-8 text-lg font-medium mt-4 md:mt-0 items-center md:items-end w-full md:w-auto">
+                class="flex flex-col md:flex-row gap-4 md:gap-8 text-lg font-medium mt-4 md:mt-0 items-center md:items-end w-full md:w-auto"
+            >
                 {# Desktop: Always show all links #}
-                <li class="hidden md:block"><a href="{{ '/' | url }}#about"
-                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">About</a></li>
-                <li class="hidden md:block"><a href="{{ '/' | url }}#experience"
-                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">Experience</a>
+                <li class="hidden md:block">
+                    <a
+                        href="{{ '/' | url }}#about"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors"
+                        >About</a
+                    >
                 </li>
-                <li class="hidden md:block"><a href="{{ '/' | url }}#work"
-                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">Work</a></li>
-                <li class="hidden md:block"><a href="{{ '/blog' | url }}"
-                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">Blog</a></li>
+                <li class="hidden md:block">
+                    <a
+                        href="{{ '/' | url }}#experience"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors"
+                        >Experience</a
+                    >
+                </li>
+                <li class="hidden md:block">
+                    <a
+                        href="{{ '/' | url }}#work"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors"
+                        >Work</a
+                    >
+                </li>
+                <li class="hidden md:block">
+                    <a
+                        href="{{ '/blog' | url }}"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors"
+                        >Blog</a
+                    >
+                </li>
 
-                {# Mobile: Conditional based on page #}
-                {% if page.url == '/' %}
-                <li class="md:hidden"><a href="{{ '/' | url }}#about"
-                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">About</a></li>
-                <li class="md:hidden"><a href="{{ '/' | url }}#experience"
-                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">Experience</a>
+                {# Mobile: Conditional based on page #} {% if page.url == '/' %}
+                <li class="md:hidden">
+                    <a
+                        href="{{ '/' | url }}#about"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors"
+                        >About</a
+                    >
                 </li>
-                <li class="md:hidden"><a href="{{ '/' | url }}#work"
-                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">Work</a></li>
-                <li class="md:hidden"><a href="{{ '/blog' | url }}"
-                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">Blog</a></li>
+                <li class="md:hidden">
+                    <a
+                        href="{{ '/' | url }}#experience"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors"
+                        >Experience</a
+                    >
+                </li>
+                <li class="md:hidden">
+                    <a
+                        href="{{ '/' | url }}#work"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors"
+                        >Work</a
+                    >
+                </li>
+                <li class="md:hidden">
+                    <a
+                        href="{{ '/blog' | url }}"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors"
+                        >Blog</a
+                    >
+                </li>
                 {% elif '/blog/' in page.url and page.url != '/blog/' %}
-                <li class="md:hidden"><a href="{{ '/blog' | url }}"
-                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors">Blog</a></li>
+                <li class="md:hidden">
+                    <a
+                        href="{{ '/blog' | url }}"
+                        class="text-gray-300 hover:text-white hover:text-brand-orange transition-colors"
+                        >Blog</a
+                    >
+                </li>
                 {% endif %}
             </ul>
         </div>

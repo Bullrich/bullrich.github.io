@@ -7,9 +7,9 @@ featured: true
 description: Secure decentralized file storage platform.
 ---
 
-Secure decentralized file storage platform where users can safely store their files knowing that only they can access them 
+Secure decentralized file storage platform where users can safely store their files knowing that only they can access them
 
-The project was build for the [HackFS](https://hackfs.com) hackathon. It won the following prizes: **35 Top projects** from IPFS, *honorable mention* by Tableland, **Best Use** by Valist.io and **Top 10 Project** by Spheron.
+The project was build for the [HackFS](https://hackfs.com) hackathon. It won the following prizes: **35 Top projects** from IPFS, _honorable mention_ by Tableland, **Best Use** by Valist.io and **Top 10 Project** by Spheron.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: "layouts/blog.html"
-title:  "Prace analysis"
-date:   2019-12-19
+title: "Prace analysis"
+date: 2019-12-19
 categories: blog
 ---
 
@@ -9,13 +9,11 @@ Technical analysis of creating the Prace action
 
 ![prace-logo](../../img/posts/prace/prace-logo.png)
 
-
 # Introduction
 
 On December 9th I released [Innerspace](https://innerspace.eu)'s first open source project: [Prace](https://github.com/innerspacetrainings/Prace.js). A GitHub action which works as a linter for Pull Requests. This project started originally as a simple pull request title regex evaluation which was hosted as a C# app on Azure Functions. I took this project as a pet project and worked on it to extend its coverage to a whole Pull Request, and, after working on it for two inconsistent months, it’s finally finished. And Prace now, instead of being a Pull Request title convention enforcer, is a _Pull Request Complete Convention enforcer._
 
 By the way, Prace is an acronym for _Pull Request Automated Convention Enforcer_.
-
 
 ## The problem we wanted to solve
 
@@ -23,9 +21,7 @@ As a Lead at Innerspace, one of my main tasks is to do code reviews. We allow de
 
 ![openPr](../../img/posts/prace/openPr.png)
 
-
-When a developer merges his commit to the main branch, if he doesn’t manually change the title, it will be something like **feature gs 123** which doesn’t tell anything except the ticket number. We have a convention that looks like the following: **[GS-123] Added check for empty bodies**. The best way to enforce this, is to have a Pull Request title which would follow this convention, so, if a developer merges without looking at the title, the suggested title would still be a valid title for us. 
-
+When a developer merges his commit to the main branch, if he doesn’t manually change the title, it will be something like **feature gs 123** which doesn’t tell anything except the ticket number. We have a convention that looks like the following: **[GS-123] Added check for empty bodies**. The best way to enforce this, is to have a Pull Request title which would follow this convention, so, if a developer merges without looking at the title, the suggested title would still be a valid title for us.
 
 ### Human errors
 
@@ -39,7 +35,7 @@ The GitHub app was developed in C# using Azure functions and the [Octokit.net ](
 
 I also became best friends with the [GitHub API](https://developer.github.com/v3/) (which, by the way, it still needs a lot of improvements).
 
-This helped us a lot. No more worrying about wrong titles which would cause an ugly git history. You could open our _Pull Request** **_tab and you would see a very nice list of Pull Request, all with the title that we wanted them to have.
+This helped us a lot. No more worrying about wrong titles which would cause an ugly git history. You could open our \_Pull Request\*\* \*\*\_tab and you would see a very nice list of Pull Request, all with the title that we wanted them to have.
 
 ![prace-working](../../img/posts/prace/prace-working.png)
 
@@ -47,17 +43,15 @@ This helped us a lot. No more worrying about wrong titles which would cause an u
 
 After finishing the first version of Prace, which only reviewed Pull Request titles, I wanted to improve it, make it open source and offer it to the community. I wanted to extend its coverage and remove the .NET dependency so any deployment server can use it.
 
-
 ### Typescript migration
 
 We decided to migrate it to Typescript, which, by generating Javascript, meant it could work on almost any platform, Azure functions, Heroku and Google Cloud functions support Javascript natively, so if anyone wanted to deploy it they only needed to push the code and add the correct environment variables to have their own version of the app running.
 
-The migration was very straightforward. We moved on to use the [@octokit/rest.js](https://octokit.github.io/rest.js/) library instead of the .Net, which works pretty similarly. The logic would work in the same way and I have some experience with Typescript, so I knew how to fill the missing gaps on the language migration (which could be summarized as using _map _and _filter _instead of _Select _and _Where_).
+The migration was very straightforward. We moved on to use the [@octokit/rest.js](https://octokit.github.io/rest.js/) library instead of the .Net, which works pretty similarly. The logic would work in the same way and I have some experience with Typescript, so I knew how to fill the missing gaps on the language migration (which could be summarized as using _map \_and \_filter \_instead of \_Select \_and \_Where_).
 
 Once we finished the new migrated version and tested it, we decided to publish it. But, just to be sure we wanted to see if there was anything like this available online.
 
 And, we [found](https://github.com/seferov/pr-lint-action) [some](https://github.com/seferov/pr-lint-action).
-
 
 ## Upping our game
 
@@ -69,11 +63,11 @@ It had to be something easy to set up because no one likes configuration files a
 
 We decided to not only check the title but also:
 
-* The body
-* The branch name
-* The reviewers
-* The amount of reviewers
-* The labels
+- The body
+- The branch name
+- The reviewers
+- The amount of reviewers
+- The labels
 
 ### Customizing it
 
@@ -81,7 +75,7 @@ To certain logical levels, the system should be customizable, so every field tha
 
 The question was how to make it customizable. The project would clearly need a configuration generator, that would be a key different from this tool to any other similar one. Convenience. People use software because it’s convenient, so Prace should also be convenient, especially at the time of setting it up.
 
-Using GitHub pages, Jekyll and [Alpaca forms](http://www.alpacajs.org/) I built a [website where users could generate the documentation](https://innerspacetrainings.github.io/Prace.js/) and from where they would only need to copy and paste it. Because this configuration take time to set up, and sometimes you want to share it to someone else (or keep the session if you close your browser) the config would be stored in the url as a GET parameter. 
+Using GitHub pages, Jekyll and [Alpaca forms](http://www.alpacajs.org/) I built a [website where users could generate the documentation](https://innerspacetrainings.github.io/Prace.js/) and from where they would only need to copy and paste it. Because this configuration take time to set up, and sometimes you want to share it to someone else (or keep the session if you close your browser) the config would be stored in the url as a GET parameter.
 
 That would be the key element in this system, is easy to set up, you can share it with a long URL and it only requires the user to copy and paste a file.
 
@@ -103,8 +97,8 @@ After investigating I found that [there is an object for given reviews](https://
 
 Having two objects brought problems, because a comment from the author counted as a review and a reviewer can give more than one review, and if he is requested again, he will also be in the requested reviewers object. So I had to make sure that a reviewer:
 
-* Was not the author of the Pull Request.
-* Was counted only one time even if he gave two reviews or was also in requested reviewers.
+- Was not the author of the Pull Request.
+- Was counted only one time even if he gave two reviews or was also in requested reviewers.
 
 ### From App to Action
 

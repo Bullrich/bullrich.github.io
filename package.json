@@ -1,37 +1,40 @@
 {
-  "name": "bullrich.github.io",
-  "version": "1.0.0",
-  "description": "My personal website",
-  "scripts": {
-    "start": "eleventy --serve --quiet",
-    "build": "NODE_ENV=production eleventy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bullrich/bullrich.github.io.git"
-  },
-  "author": "Javier Bullrich <javier@bullrich.dev>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bullrich/bullrich.github.io/issues"
-  },
-  "homepage": "https://github.com/bullrich/bullrich.github.io#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "@tailwindcss/cli": "^4.1.18",
-    "@tailwindcss/postcss": "^4.1.18",
-    "@tailwindcss/typography": "^0.5.19",
-    "autoprefixer": "^10.4.23",
-    "eleventy-sass": "^2.2.1",
-    "html-minifier": "^4.0.0",
-    "moment": "^2.29.4",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18"
-  },
-  "dependencies": {
-    "eleventy-plugin-time-to-read": "^1.3.0",
-    "qrcode": "^1.5.1"
-  }
+    "name": "bullrich.github.io",
+    "version": "1.0.0",
+    "description": "My personal website",
+    "scripts": {
+        "start": "eleventy --serve --quiet",
+        "build": "NODE_ENV=production eleventy",
+        "lint": "prettier --check .",
+        "format": "prettier --write ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bullrich/bullrich.github.io.git"
+    },
+    "author": "Javier Bullrich <javier@bullrich.dev>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bullrich/bullrich.github.io/issues"
+    },
+    "homepage": "https://github.com/bullrich/bullrich.github.io#readme",
+    "devDependencies": {
+        "@11ty/eleventy": "^2.0.0",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+        "@tailwindcss/cli": "^4.1.18",
+        "@tailwindcss/postcss": "^4.1.18",
+        "@tailwindcss/typography": "^0.5.19",
+        "autoprefixer": "^10.4.23",
+        "eleventy-sass": "^2.2.1",
+        "html-minifier": "^4.0.0",
+        "moment": "^2.29.4",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.5.6",
+        "prettier": "^3.7.4",
+        "tailwindcss": "^4.1.18"
+    },
+    "dependencies": {
+        "eleventy-plugin-time-to-read": "^1.3.0",
+        "qrcode": "^1.5.1"
+    }
 }

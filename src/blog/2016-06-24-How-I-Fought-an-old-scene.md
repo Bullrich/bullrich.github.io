@@ -1,13 +1,14 @@
 ---
 layout: "layouts/blog.html"
-title:  "How I fought two days against an old scene"
-date:   2016-06-24
+title: "How I fought two days against an old scene"
+date: 2016-06-24
 categories:
     - blog
 tags:
     - unity
 ---
-I have been fighting for a couple of days against a problem I had with a scene in Unity. 
+
+I have been fighting for a couple of days against a problem I had with a scene in Unity.
 
 First, I noticed that the game didn’t load a script when compiling for Android, then others scripts didn’t find the gameobject with said script. Then I started to debug and debug…
 
