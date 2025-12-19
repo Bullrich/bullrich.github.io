@@ -21,6 +21,13 @@ not metaDesc %} {% set metaDesc = summary %} {% endif %}
 <meta name="twitter:image" content="{{ socialImage }}" />
 <meta property="og:image:alt" content="Page image for {{ pageTitle }}" />
 <meta name="twitter:image:alt" content="Page image for {{ pageTitle }}" />
+{% else %} {# Use dynamic OpenGraph image #}
+<meta property="og:image" content="{{ site.url }}/og/{{ page.fileSlug }}.html" />
+<meta name="twitter:image" content="{{ site.url }}/og/{{ page.fileSlug }}.html" />
+<meta property="og:image:alt" content="Page image for {{ pageTitle }}" />
+<meta name="twitter:image:alt" content="Page image for {{ pageTitle }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 {% endif %} {% if metaDesc %}
 <meta name="description" content="{{ metaDesc }}" />
 <meta name="twitter:description" content="{{ metaDesc }}" />
