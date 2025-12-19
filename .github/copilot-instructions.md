@@ -90,6 +90,7 @@ Content is organized into collections defined in `.eleventy.js`. These collectio
     - `html-minifier`: Minifies HTML in production builds.
     - `eleventy-plugin-time-to-read`: Estimates reading time for blog posts.
     - `@tailwindcss/typography`: Provides `.prose` classes for markdown content.
+- **OpenGraph Images**: Dynamic OpenGraph images are generated for each page via `src/og-image.njk`. These use the neobrutalist design with the BSM logo and are accessible at `/og/{page-slug}.html` for social media previews.
 
 ## Key Files
 
