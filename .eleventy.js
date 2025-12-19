@@ -87,6 +87,19 @@ module.exports = config => {
         return [...collection.getFilteredByGlob("./src/links/*.md")].reverse();
     });
 
+    // Collection for OpenGraph images - only blog, portfolio, employment, and index
+    config.addCollection("ogPages", collection => {
+        return collection.getAll().filter(item => {
+            const path = item.inputPath;
+            return (
+                path === "./src/index.md" ||
+                path.startsWith("./src/blog/") ||
+                path.startsWith("./src/portfolio/") ||
+                path.startsWith("./src/employment/")
+            );
+        });
+    });
+
     config.addFilter("excerpt", post => {
         const content = post.replace(/(<([^>]+)>)/gi, "");
         return content.substr(0, content.lastIndexOf(" ", 200)) + "...";

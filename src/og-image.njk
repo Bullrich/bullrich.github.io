@@ -1,10 +1,16 @@
 ---
 pagination:
-    data: collections.all
+    data: collections.ogPages
     size: 1
     alias: item
-permalink: "/og/{{ item.fileSlug }}.html"
 eleventyExcludeFromCollections: true
+eleventyComputed:
+    permalink: |
+        {%- if item.inputPath == './src/index.md' -%}
+        /og/index.html
+        {%- else -%}
+        /og/{{ item.page.fileSlug }}.html
+        {%- endif -%}
 ---
 <!doctype html>
 <html lang="en">
@@ -134,6 +140,30 @@ eleventyExcludeFromCollections: true
                 opacity: 0.1;
             }
 
+            /* Homepage special styling - matches homepage hero */
+            .title-home {
+                font-size: 96px;
+                font-weight: 900;
+                letter-spacing: -0.05em;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                color: white;
+            }
+
+            .title-home::before {
+                display: none;
+            }
+
+            .title-home .name-first {
+                color: white;
+            }
+
+            .title-home .name-last {
+                color: #f26522;
+            }
+
             .footer-accent {
                 position: absolute;
                 bottom: 40px;
@@ -160,7 +190,14 @@ eleventyExcludeFromCollections: true
 
             <!-- Title in the center -->
             <div class="title-container">
+                {% if item.inputPath == './src/index.md' or item.fileSlug == '' %}
+                <h1 class="title title-home">
+                    <span class="name-first">Javier</span>
+                    <span class="name-last">Bullrich</span>
+                </h1>
+                {% else %}
                 <h1 class="title">{{ item.data.title or item.data.metaTitle or site.name }}</h1>
+                {% endif %}
             </div>
 
             <!-- Bottom accent -->
