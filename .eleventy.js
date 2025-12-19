@@ -3,6 +3,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const timeToRead = require("eleventy-plugin-time-to-read");
 const qr = require("qrcode");
+const EleventyPluginOgImage = require("eleventy-plugin-og-image");
 
 module.exports = config => {
     // Filters
@@ -87,19 +88,6 @@ module.exports = config => {
         return [...collection.getFilteredByGlob("./src/links/*.md")].reverse();
     });
 
-    // Collection for OpenGraph images - only blog, portfolio, employment, and index
-    config.addCollection("ogPages", collection => {
-        return collection.getAll().filter(item => {
-            const path = item.inputPath;
-            return (
-                path === "./src/index.md" ||
-                path.startsWith("./src/blog/") ||
-                path.startsWith("./src/portfolio/") ||
-                path.startsWith("./src/employment/")
-            );
-        });
-    });
-
     config.addFilter("excerpt", post => {
         const content = post.replace(/(<([^>]+)>)/gi, "");
         return content.substr(0, content.lastIndexOf(" ", 200)) + "...";
@@ -109,6 +97,20 @@ module.exports = config => {
     config.addPlugin(eleventySass);
     config.addPlugin(syntaxHighlight);
     config.addPlugin(timeToRead);
+    config.addPlugin(EleventyPluginOgImage, {
+        satoriOptions: {
+            fonts: [
+                {
+                    name: "Inter",
+                    data: require("fs").readFileSync(
+                        "node_modules/@fontsource/inter/files/inter-latin-700-normal.woff"
+                    ),
+                    weight: 700,
+                    style: "normal",
+                },
+            ],
+        },
+    });
 
     if (process.env.NODE_ENV === "production") {
         config.addTransform("htmlmin", function (content) {

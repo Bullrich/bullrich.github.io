@@ -1,0 +1,74 @@
+<style>
+    .root {
+        width: 1200px;
+        height: 630px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #15202b;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        background: #f26522;
+        border: 8px solid white;
+        border-radius: 20px;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        font-weight: 900;
+        color: white;
+    }
+
+    .title {
+        font-size: 72px;
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.1;
+        text-transform: uppercase;
+        padding: 40px 60px;
+        background: white;
+        color: #15202b;
+        border: 8px solid #15202b;
+        border-radius: 20px;
+        box-shadow: 12px 12px 0px #f26522;
+        max-width: 900px;
+        display: flex;
+    }
+
+    .title-home {
+        font-size: 96px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name-first {
+        color: white;
+    }
+
+    .name-last {
+        color: #f26522;
+    }
+</style>
+
+<div class="root">
+    <div class="logo">BSM</div>
+    
+    {% if isHomepage %}
+    <div class="title title-home">
+        <span class="name-first">Javier</span>
+        <span class="name-last">Bullrich</span>
+    </div>
+    {% else %}
+    <div class="title">{{ title }}</div>
+    {% endif %}
+</div>
