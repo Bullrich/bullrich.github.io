@@ -39,4 +39,13 @@
     .prose-project :where(code):not(:where([class~="not-prose"] *))::after {
         content: none !important;
     }
+
+    /* Remove quotes from blockquotes */
+    .prose-project :where(blockquote p:first-of-type):not(:where([class~="not-prose"] *))::before {
+        content: none;
+    }
+
+    .prose-project :where(blockquote p:last-of-type):not(:where([class~="not-prose"] *))::after {
+        content: none;
+    }
 }
