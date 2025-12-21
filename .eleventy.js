@@ -4,7 +4,31 @@ const timeToRead = require("eleventy-plugin-time-to-read");
 const qr = require("qrcode");
 const EleventyPluginOgImage = require("eleventy-plugin-og-image").default;
 
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt, sizes, cls, loading = "lazy") {
+    let metadata = await Image(src, {
+        widths: [300, 600, 900, "auto"],
+        formats: ["avif", "webp", "jpeg"],
+        outputDir: "./dist/img/",
+    });
+
+    let imageAttributes = {
+        alt,
+        sizes,
+        class: cls,
+        loading: loading,
+        decoding: "async",
+    };
+
+    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    return Image.generateHTML(metadata, imageAttributes);
+}
+
 module.exports = config => {
+    // Add image shortcode
+    config.addNunjucksAsyncShortcode("image", imageShortcode);
+
     // Filters
     const dateFilter = require("./src/filters/date-filter.js");
     const w3DateFilter = require("./src/filters/w3-date-filter.js");
