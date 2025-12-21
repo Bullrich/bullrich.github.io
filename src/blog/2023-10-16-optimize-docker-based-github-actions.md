@@ -19,7 +19,7 @@ GitHub does not cache your images, so every time you intend to run an action, it
 
 Let’s say we have a Typescript project with the following `action.yml`:
 
-```yaml
+```yml
 name: "Hello World"
 description: "Greet someone and record the time"
 runs:
@@ -92,7 +92,7 @@ The action triggers every time you tag a commit.
 
 The action goes like this:
 
-```yaml
+```yml
 {% raw %}
 name: Publish package to GitHub Packages
 on:
@@ -157,7 +157,7 @@ Once it has been published, it is quite straightforward to access to it.
 
 At the beginning of the guide, we showed the `action.yml` file of an example action. It was the following:
 
-```yaml
+```yml
 name: "Hello World"
 description: "Greet someone and record the time"
 runs:
@@ -169,7 +169,7 @@ To instruct the action to fetch an image from the registry, we simply have to re
 
 If we pushed the tag `1.0.0`, then we need to rewrite the field in the following way:
 
-```yaml
+```yml
 runs:
     using: "docker"
     image: "docker://ghcr.io/owner/repository/action:1.0.0"
@@ -251,7 +251,7 @@ This action is executed when a commit is pushed to the `main` branch and the `ac
 
 Let’s first see the action and then have an analysis of how it works.
 
-```yaml
+```yml
 name: Publish package to GitHub Packages
 
 on:
