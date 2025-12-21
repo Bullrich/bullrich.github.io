@@ -87,7 +87,20 @@ module.exports = config => {
 
     config.addFilter("excerpt", post => {
         const content = post.replace(/(<([^>]+)>)/gi, "");
-        return content.substr(0, content.lastIndexOf(" ", 200)) + "...";
+        const limit = 200;
+
+        let cutIndex = content.lastIndexOf(" ", limit);
+        if (cutIndex === -1) cutIndex = limit;
+
+        // New way: finding the first line break
+        const firstLineBreak = content.indexOf("\n");
+
+        // Use line break if it exists and is earlier than the character limit cutoff
+        if (firstLineBreak > -1 && firstLineBreak < cutIndex) {
+            cutIndex = firstLineBreak;
+        }
+
+        return content.substr(0, cutIndex) + "...";
     });
 
     // Plugins
