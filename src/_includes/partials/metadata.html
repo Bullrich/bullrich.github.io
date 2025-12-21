@@ -17,10 +17,10 @@ not metaDesc %} {% set metaDesc = summary %} {% endif %}
 <meta name="twitter:creator" content="@{{ social.twitter }}" />
 
 {# Generate OG image for relevant pages #} {% if page.inputPath == './src/index.md' %} {% ogImage
-"src/_includes/partials/opengraph.html", { title: pageTitle, isHomepage: true } %} {% elif
+"./_includes/partials/opengraph.html", { title: pageTitle, isHomepage: true } %} {% elif
 page.inputPath.startsWith('./src/blog/') or page.inputPath.startsWith('./src/portfolio/') or
 page.inputPath.startsWith('./src/employment/') or page.inputPath == './src/not-found.md' %} {%
-ogImage "src/_includes/partials/opengraph.html", { title: title, isHomepage: false } %} {% endif %}
+ogImage "./_includes/partials/opengraph.html", { title: title, isHomepage: false } %} {% endif %}
 <meta property="og:image:alt" content="Page image for {{ pageTitle }}" />
 <meta name="twitter:image:alt" content="Page image for {{ pageTitle }}" />
 <meta property="og:image:width" content="1200" />

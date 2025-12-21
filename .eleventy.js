@@ -1,9 +1,8 @@
-const eleventySass = require("eleventy-sass");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const timeToRead = require("eleventy-plugin-time-to-read");
 const qr = require("qrcode");
-const EleventyPluginOgImage = require("eleventy-plugin-og-image");
+const EleventyPluginOgImage = require("eleventy-plugin-og-image").default;
 
 module.exports = config => {
     // Filters
@@ -55,8 +54,6 @@ module.exports = config => {
         fs.writeFileSync(tailwindOutputPath, result.css);
     });
 
-    config.addPassthroughCopy({ "./node_modules/jquery/dist/jquery.min.js": "js/jquery.min.js" });
-
     config.addPassthroughCopy("./src/img/");
     config.addPassthroughCopy("./src/css/fonts/");
     config.addPassthroughCopy("./src/scripts/");
@@ -94,7 +91,6 @@ module.exports = config => {
     });
 
     // Plugins
-    config.addPlugin(eleventySass);
     config.addPlugin(syntaxHighlight);
     config.addPlugin(timeToRead);
     config.addPlugin(EleventyPluginOgImage, {
