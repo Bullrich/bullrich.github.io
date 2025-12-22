@@ -2,11 +2,9 @@
 layout: "layouts/index.html"
 title: "Javier Bullrich"
 description: Software developer with a great focus on automation, front end and developer’s experience.
-image: img/vr_coffee.jpg
 user:
-    image: img/vr_coffee.jpg
     name: Javier Bullrich
-    address: Berlin, Germany
+    address: Dublin, Ireland
     codersrank: bullrich
     email: javier@bullrich.dev
     github: Bullrich

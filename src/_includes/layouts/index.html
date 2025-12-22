@@ -139,11 +139,7 @@
                     ></div>
 
                     {# Image #}
-                    <img
-                        src="{{ image }}"
-                        alt="Javier Bullrich"
-                        class="relative z-10 rounded-xl border-1 border-brand-orange w-48 h-48 md:w-64 md:h-64 object-cover rounded-blob shadow-xl transform transition-transform duration-500 group-hover:-translate-y-4"
-                    />
+                    {% image "src/img/vr_coffee.jpg", "Javier Bullrich", "(min-width: 768px) 256px, 192px", "about-image" %}
                 </div>
             </div>
 
