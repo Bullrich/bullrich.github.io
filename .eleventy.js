@@ -110,21 +110,21 @@ module.exports = config => {
     });
 
     config.addFilter("excerpt", post => {
-        const content = post.replace(/(<([^>]+)>)/gi, "");
+        const content = post.replace(/(<([^>]+)>)/gi, "").trim();
         const limit = 200;
 
         let cutIndex = content.lastIndexOf(" ", limit);
         if (cutIndex === -1) cutIndex = limit;
 
-        // New way: finding the first line break
+        // Find the first line break to avoid including subsequent paragraphs in the excerpt
         const firstLineBreak = content.indexOf("\n");
 
         // Use line break if it exists and is earlier than the character limit cutoff
-        if (firstLineBreak > -1 && firstLineBreak < cutIndex) {
+        if (firstLineBreak > 0 && firstLineBreak < cutIndex) {
             cutIndex = firstLineBreak;
         }
 
-        return content.substr(0, cutIndex) + "...";
+        return content.substring(0, cutIndex) + "...";
     });
 
     // Plugins
