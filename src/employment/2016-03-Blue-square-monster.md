@@ -3,6 +3,9 @@ company: Blue Square Monster
 title: Freelancer
 duration: 2016 - 2017
 website: ../Games/
+technologies:
+    - Unity3D
+    - C#
 ---
 
 Worked on several custom projects and Unity plugins.
