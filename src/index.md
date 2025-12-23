@@ -11,7 +11,7 @@ user:
     linkedin: javibullrich/?locale=en_US
 technologies:
     - Open AI
-    - Ethereum
+    - Python
     - Solidity
     - Docker
     - SvelteKit
@@ -20,8 +20,8 @@ technologies:
     - Rust
 ---
 
-<p>I’m Javier, software developer with a strong focus on developer experience and front end development.</p>
+<p>I’m Javier, software developer with a strong focus on developer experience and infrastructure.</p>
 
 <p>Experienced game developer, I shifted those skills to transform practical ideas into fun to use software with gamification techniques.</p>
 
-<p>Currently located in Dublin, Ireland, working at Parity, doing Engineering Automation (and developing lots of GitHub Bots!). Here are a few technologies I've been working with recently:</p>
+<p>Currently located in Dublin, Ireland, working at Meta, doing Production Engineering (and working with those cool AI servers!). Here are a few technologies I've been working with recently:</p>
