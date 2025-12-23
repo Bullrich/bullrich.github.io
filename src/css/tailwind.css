@@ -8,6 +8,7 @@
     --color-brand-purple: #6c63ff;
     --color-brand-green: #00b87c;
     --font-sans: "Inter", sans-serif;
+    --radius-blob: 60% 40% 30% 70% / 60% 30% 70% 40%;
 }
 
 /* Custom base styles mapping to our theme */
@@ -52,5 +53,13 @@
     /* Hero Image Styling */
     .hero-image {
         @apply w-[100%] max-w-none translate-x-[15%] translate-y-[15%] sm:w-[80%] sm:translate-x-[10%] md:w-[600px] md:object-contain md:drop-shadow-2xl md:translate-x-10 md:translate-y-10 md:max-w-full lg:w-[700px] hover:scale-105 transition-transform duration-700 ease-in-out pointer-events-auto;
+    }
+
+    /* About Image Styling */
+    .about-image {
+        position: relative;
+        z-index: 10;
+        border-radius: var(--radius-blob);
+        @apply border border-brand-orange w-48 h-48 md:w-64 md:h-64 object-cover shadow-xl transform transition-transform duration-500 group-hover:-translate-y-4;
     }
 }
