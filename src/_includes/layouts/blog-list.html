@@ -28,8 +28,24 @@
                 <a
                     href="{{ post.url }}"
                     class="relative bg-gray-900 border-4 border-white rounded-2xl p-5 md:p-8 flex flex-col h-full block"
+                    {%
+                    if
+                    post.data.isCodingBull
+                    %}target="_blank"
+                    rel="noopener noreferrer"
+                    {%
+                    endif
+                    %}
                 >
-                    {# Title (On Top) #}
+                    {# CodingBull Banner #} {% if post.data.isCodingBull %}
+                    <div class="mb-4">
+                        <span
+                            class="inline-block bg-brand-orange text-brand-blue border-2 border-brand-blue font-black px-4 py-2 rounded-lg text-sm uppercase tracking-wider transform -rotate-1"
+                        >
+                            🐂 CodingBull Post
+                        </span>
+                    </div>
+                    {% endif %} {# Title (On Top) #}
                     <h2
                         class="text-2xl md:text-3xl font-black text-brand-orange group-hover:text-white mb-4 uppercase tracking-wide transition-colors"
                     >
@@ -39,8 +55,10 @@
                     {# Mobile: Date & Time #}
                     <div class="md:hidden mb-4 flex gap-3 text-sm text-gray-400">
                         <span>{{ post.date | w3DateFilter }}</span>
+                        {% if not post.data.isCodingBull %}
                         <span>•</span>
                         <span>{{ post.content | timeToRead ('150 words a minute') }} read</span>
+                        {% endif %}
                     </div>
 
                     {# Desktop: Side Section + Preview #}
@@ -54,15 +72,19 @@
                             >
                                 {{ post.date | w3DateFilter }}
                             </span>
+                            {% if not post.data.isCodingBull %}
                             <span class="text-gray-400 text-sm">
                                 {{ post.content | timeToRead ('150 words a minute') }} read
                             </span>
+                            {% endif %}
                         </div>
 
                         {# Preview (Takes remaining space) #}
                         <div class="flex-1">
                             <p class="text-gray-300 text-base leading-relaxed">
-                                {{ post.templateContent | excerpt }}
+                                {% if post.data.isCodingBull %} {{ post.data.description | striptags
+                                | truncate(200) }} {% else %} {{ post.templateContent | excerpt }}
+                                {% endif %}
                             </p>
                         </div>
                     </div>

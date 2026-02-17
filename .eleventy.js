@@ -102,7 +102,35 @@ module.exports = config => {
     });
 
     config.addCollection("blog", collection => {
-        return [...collection.getFilteredByGlob("./src/blog/*.md")].reverse();
+        // Get local blog posts
+        const localPosts = [...collection.getFilteredByGlob("./src/blog/*.md")];
+
+        // Get CodingBull posts from global data
+        const codingBullPosts = collection.getAll()[0]?.data?.codingbull || [];
+
+        // Convert CodingBull posts to a format compatible with Eleventy collections
+        const formattedCodingBullPosts = codingBullPosts.map(post => ({
+            date: post.date,
+            data: {
+                title: post.title,
+                date: post.date,
+                isCodingBull: true,
+                source: post.source,
+                description: post.description,
+            },
+            url: post.url,
+            content: post.content,
+            // Add template content property for compatibility
+            templateContent: post.content,
+        }));
+
+        // Merge and sort by date (newest first)
+        const allPosts = [...localPosts, ...formattedCodingBullPosts];
+        return allPosts.sort((a, b) => {
+            const dateA = a.date || a.data.date;
+            const dateB = b.date || b.data.date;
+            return dateB - dateA;
+        });
     });
 
     config.addCollection("links", collection => {

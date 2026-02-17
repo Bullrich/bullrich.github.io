@@ -299,7 +299,25 @@
             <a
                 href="{{ latestPost.url }}"
                 class="relative bg-gray-900 border-4 border-white rounded-2xl p-6 md:p-8 flex flex-col block"
+                {%
+                if
+                latestPost.data.isCodingBull
+                %}target="_blank"
+                rel="noopener noreferrer"
+                {%
+                endif
+                %}
             >
+                {# CodingBull Banner #} {% if latestPost.data.isCodingBull %}
+                <div class="mb-4">
+                    <span
+                        class="inline-block bg-brand-orange text-brand-blue border-2 border-brand-blue font-black px-4 py-2 rounded-lg text-sm uppercase tracking-wider transform -rotate-1"
+                    >
+                        🐂 CodingBull Post
+                    </span>
+                </div>
+                {% endif %}
+
                 <h3
                     class="text-2xl md:text-3xl font-black text-brand-orange group-hover:text-white mb-4 uppercase tracking-wide transition-colors"
                 >
@@ -308,12 +326,16 @@
 
                 <div class="flex gap-4 text-sm text-gray-400 mb-4">
                     <span>{{ latestPost.date | w3DateFilter }}</span>
+                    {% if not latestPost.data.isCodingBull %}
                     <span>•</span>
                     <span>{{ latestPost.content | timeToRead ('150 words a minute') }} read</span>
+                    {% endif %}
                 </div>
 
                 <p class="text-gray-300 text-base leading-relaxed mb-6">
-                    {{ latestPost.templateContent | excerpt }}
+                    {% if latestPost.data.isCodingBull %} {{ latestPost.data.description | striptags
+                    | truncate(200) }} {% else %} {{ latestPost.templateContent | excerpt }} {%
+                    endif %}
                 </p>
 
                 <div class="flex justify-between items-center">
