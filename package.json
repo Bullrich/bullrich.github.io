@@ -20,6 +20,7 @@
     "homepage": "https://github.com/bullrich/bullrich.github.io#readme",
     "devDependencies": {
         "@11ty/eleventy": "^3.1.2",
+        "@11ty/eleventy-fetch": "^5.1.1",
         "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
         "@fontsource/inter": "^5.2.8",
         "@tailwindcss/cli": "^4.1.18",
@@ -32,6 +33,7 @@
         "npm-run-all": "^4.1.5",
         "postcss": "^8.5.6",
         "prettier": "^3.7.4",
+        "rss-parser": "^3.13.0",
         "tailwindcss": "^4.1.18"
     },
     "dependencies": {

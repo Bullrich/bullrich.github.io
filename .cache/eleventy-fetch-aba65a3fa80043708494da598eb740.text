@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Coding Bull</title>
+    <subtitle>A feed of the latest posts from our blog.</subtitle>
+    <link href="https://codingbull.dev/feed.xml" rel="self" />
+    <link href="https://codingbull.dev/" />
+    <updated>2024-05-16T00:00:00Z</updated>
+    <id>https://codingbull.dev</id>
+    <author>
+        <name>CodingBull</name>
+        <email>info@codingbull.dev</email>
+    </author>
+    
+    
+    <entry>
+        <title>GPT-4o in under 3 minutes</title>
+        <link href="https://codingbull.dev/blog/gpt-4o-in-under-3-minutes.html" />
+        <updated>2024-05-16T00:00:00Z</updated>
+        <id>https://codingbull.dev/blog/gpt-4o-in-under-3-minutes.html</id>
+        <content type="html">
+            <![CDATA[
+            
+                Quick introduction into how to use the newly released model GPT-4o.
+
+            
+      ]]>
+        </content>
+    </entry>
+    
+    
+    <entry>
+        <title>Cache your actions</title>
+        <link href="https://codingbull.dev/blog/cache-your-actions.html" />
+        <updated>2024-05-06T00:00:00Z</updated>
+        <id>https://codingbull.dev/blog/cache-your-actions.html</id>
+        <content type="html">
+            <![CDATA[
+            
+                If your actions have a long installation step (or very big node_modules) you can cache the installation step using the GitHub action actions/cache
+
+            
+      ]]>
+        </content>
+    </entry>
+    
+    
+    <entry>
+        <title>You can use GitHub actions major version by itself</title>
+        <link href="https://codingbull.dev/blog/github-actions-major-version.html" />
+        <updated>2024-05-05T00:00:00Z</updated>
+        <id>https://codingbull.dev/blog/github-actions-major-version.html</id>
+        <content type="html">
+            <![CDATA[
+            
+                Did you know that the official GitHub actions provide a shortcut for the latest major version? Any action that [starts with `actions/`](https://github.com/actions) usually has two versions that you can use.
+
+            
+      ]]>
+        </content>
+    </entry>
+    
+    
+    <entry>
+        <title>Run all your tests concurrently</title>
+        <link href="https://codingbull.dev/blog/run-all-your-tests-concurrently.html" />
+        <updated>2024-05-03T00:00:00Z</updated>
+        <id>https://codingbull.dev/blog/run-all-your-tests-concurrently.html</id>
+        <content type="html">
+            <![CDATA[
+            
+                Find out how you can fail-fast every CI check, letting your developers fix every test at the same time
+            
+      ]]>
+        </content>
+    </entry>
+    
+    
+    <entry>
+        <title>How to access data between Matrix outputs</title>
+        <link href="https://codingbull.dev/blog/how-to-access-data-between-matrix-outputs.html" />
+        <updated>2023-05-02T00:00:00Z</updated>
+        <id>https://codingbull.dev/blog/how-to-access-data-between-matrix-outputs.html</id>
+        <content type="html">
+            <![CDATA[
+            
+                An introduction into how tricky it is to obtain the output from a matrix
+            
+      ]]>
+        </content>
+    </entry>
+    
+    
+    <entry>
+        <title>Hello World</title>
+        <link href="https://codingbull.dev/blog/hello-world.html" />
+        <updated>2023-05-01T00:00:00Z</updated>
+        <id>https://codingbull.dev/blog/hello-world.html</id>
+        <content type="html">
+            <![CDATA[
+            
+                <p>Hello World!</p>
+<p>This is the first entry.</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> os
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'hello </span><span class="token interpolation"><span class="token punctuation">{</span>os<span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span></code></pre>
+
+            
+      ]]>
+        </content>
+    </entry>
+    
+</feed>

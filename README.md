@@ -4,7 +4,11 @@
 
 Personal portfolio website showcasing my work, blog posts, and professional experience. Built with [Eleventy](https://www.11ty.dev/) and styled with **Tailwind CSS V4** in a bold **neobrutalist** design with brand colors (blue `#0d1b2a` and orange `#f95738`).
 
-**Features**: Portfolio projects, blog, certifications, work history, and social links with QR code.
+**Features**: Portfolio projects, blog (with CodingBull integration), certifications, work history, and social links with QR code.
+
+## Blog Integration
+
+This site integrates blog posts from [CodingBull](https://codingbull.dev) alongside local blog posts. CodingBull posts are fetched via RSS feed and displayed chronologically with a distinctive banner, linking to the original articles on codingbull.dev.
 
 ### Design
 
