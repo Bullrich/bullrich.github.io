@@ -82,9 +82,9 @@
                         {# Preview (Takes remaining space) #}
                         <div class="flex-1">
                             <p class="text-gray-300 text-base leading-relaxed">
-                                {% if post.data.isCodingBull %} {{ post.data.description | striptags
-                                | truncate(200) }} {% else %} {{ post.templateContent | excerpt }}
-                                {% endif %}
+                                {% if post.data.isCodingBull %}{{ post.data.description | striptags
+                                | truncate(200) }}{% else %}{{ post.templateContent | excerpt }}{%
+                                endif %}
                             </p>
                         </div>
                     </div>

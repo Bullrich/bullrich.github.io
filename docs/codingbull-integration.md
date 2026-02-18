@@ -20,12 +20,14 @@ The RSS feed is fetched from `https://codingbull.dev/feed.xml` and cached for 1 
 ### 2. Data File (`src/_data/codingbull.js`)
 
 This global data file:
+
 - Fetches the RSS feed during build time
 - Parses the feed items
 - Transforms them into a structure compatible with Eleventy collections
 - Returns an array of post objects with standardized fields
 
 **Key fields:**
+
 - `title`: Post title
 - `date`: Publication date
 - `url`: Link to original post on codingbull.dev
@@ -36,6 +38,7 @@ This global data file:
 ### 3. Blog Collection Merge (`.eleventy.js`)
 
 The blog collection configuration:
+
 1. Gets local blog posts from `src/blog/*.md`
 2. Gets CodingBull posts from the global data
 3. Merges both arrays
@@ -56,11 +59,13 @@ CodingBull posts are distinguished by:
 Both templates handle CodingBull posts:
 
 #### Blog List (`layouts/blog-list.html`)
+
 - Displays CodingBull banner at the top of external post cards
 - Uses `post.data.description` for excerpts instead of `post.templateContent`
 - Conditionally shows reading time only for local posts
 
 #### Homepage (`layouts/index.html`)
+
 - "Latest from the Blog" section supports both post types
 - Shows CodingBull banner if the latest post is external
 - Links to codingbull.dev for external posts
@@ -76,6 +81,7 @@ Both templates handle CodingBull posts:
 ## Error Handling
 
 The integration includes robust error handling:
+
 - If the RSS fetch fails, it logs an error and returns an empty array
 - The site continues to build normally with only local posts
 - No breaking changes to the user experience
@@ -83,6 +89,7 @@ The integration includes robust error handling:
 ## Cache Duration
 
 The RSS feed is cached for **1 day** (configurable in `src/_data/codingbull.js`). This balances:
+
 - Fresh content on regular rebuilds
 - Reduced build times
 - Lower bandwidth usage
@@ -90,6 +97,7 @@ The RSS feed is cached for **1 day** (configurable in `src/_data/codingbull.js`)
 ## Future Enhancements
 
 Possible improvements:
+
 - Add filters to show only CodingBull or only local posts
 - Display post counts for each source
 - Add RSS feed icon to external post cards

@@ -333,9 +333,9 @@
                 </div>
 
                 <p class="text-gray-300 text-base leading-relaxed mb-6">
-                    {% if latestPost.data.isCodingBull %} {{ latestPost.data.description | striptags
-                    | truncate(200) }} {% else %} {{ latestPost.templateContent | excerpt }} {%
-                    endif %}
+                    {% if latestPost.data.isCodingBull %}{{ latestPost.data.description | striptags
+                    | truncate(200) }}{% else %}{{ latestPost.templateContent | excerpt }}{% endif
+                    %}
                 </p>
 
                 <div class="flex justify-between items-center">
