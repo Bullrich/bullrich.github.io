@@ -75,7 +75,7 @@ Finally, I install my most common used libs and apps
 
 `brew install mdv tldr tree yarn nvm deno gh imagemagick jq tree lazygit`
 
-`brew install --cask 1password docker google-chrome arc cleanshot docker firefox postman fork jetbrains-toolbox visual-studio-code pinta`
+`brew install --cask 1password docker google-chrome docker firefox postman fork visual-studio-code pinta godot obsidian plex gh go herdr jq glow node nvm redis sqlc sqlite tldr tree uv `
 
 # Windows installation
 
